@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://lvsijx48nxhc"]
+[gd_scene format=3 uid="uid://cxnryo85usjro"]
 
-[ext_resource type="Texture2D" uid="uid://ckwkohql8fi7v" path="res://titlescreen.png" id="1_v6p8y"]
+[ext_resource type="Texture2D" uid="uid://b6wgibu2m0hgs" path="res://titlescreen.png" id="1_v6p8y"]
 
 [node name="Title Screen" type="Node2D" unique_id=1550739032]
 
@@ -9,43 +9,38 @@ offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("1_v6p8y")
 expand_mode = 1
-metadata/_edit_lock_ = true
 
 [node name="title" type="RichTextLabel" parent="." unique_id=639087994]
 clip_contents = false
-offset_left = 60.0
-offset_top = 37.0
-offset_right = 509.0
-offset_bottom = 316.0
+offset_left = 63.0
+offset_top = 32.0
+offset_right = 422.0
+offset_bottom = 327.0
 theme_override_constants/outline_size = 40
 theme_override_font_sizes/normal_font_size = 108
-text = "Witchy
-Ware"
+text = "WitchyWare"
 scroll_active = false
 
-[node name="Start" type="Button" parent="." unique_id=1411994164]
-offset_left = 60.0
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=389449458]
+offset_left = 63.0
 offset_top = 345.0
-offset_right = 235.0
-offset_bottom = 398.0
-scale = Vector2(1.6442529, 1.2661871)
+offset_right = 345.0
+offset_bottom = 493.0
+
+[node name="start" type="Button" parent="VBoxContainer" unique_id=1284223395]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
 text = "Start Game"
 
-[node name="Settings" type="Button" parent="." unique_id=498473722]
-anchors_preset = -1
-anchor_left = -2.726
-anchor_top = -6.6600003
-anchor_right = -2.726
-anchor_bottom = -6.6600003
-offset_left = 60.0
-offset_top = 515.0
-offset_right = 235.00003
-offset_bottom = 568.0
-scale = Vector2(1.6442529, 1.2661871)
+[node name="settings" type="Button" parent="VBoxContainer" unique_id=1220616433]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Settings"
 
-[node name="Quit" type="Button" parent="." unique_id=1791057632]
-offset_left = 60.0
-offset_top = 428.0
-offset_right = 235.0
-offset_bottom = 481.0
-scale = Vector2(1.6442529, 1.2661871)
+[node name="quit" type="Button" parent="VBoxContainer" unique_id=773222748]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Quit"
