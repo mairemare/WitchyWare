@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6wgibu2m0hgs"
-path="res://.godot/imported/titlescreen.png-e3f759805a2e0efcb512d75c1c8b7721.ctex"
+uid="uid://bj3ct2gnxsxl"
+path="res://.godot/imported/star barrier.png-7f8d3526ff60268ea3614a9dceee3d26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://titlescreen.png"
-dest_files=["res://.godot/imported/titlescreen.png-e3f759805a2e0efcb512d75c1c8b7721.ctex"]
+source_file="res://images/star barrier.png"
+dest_files=["res://.godot/imported/star barrier.png-7f8d3526ff60268ea3614a9dceee3d26.ctex"]
 
 [params]
 
