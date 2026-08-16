@@ -5,13 +5,6 @@ extends Control
 @onready var settings: Panel = $settings
 
 
-# Called when the node enters the scene tree for the first time.
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
 func _ready() -> void:
 	main_buttons.visible = true
 	settings.visible = false
