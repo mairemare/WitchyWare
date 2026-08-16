@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hvl32m53um1d"
-path="res://.godot/imported/casper sprite 1.png-609cfdc28a4e9f765f92969605997b9f.ctex"
+uid="uid://dk3qsgfhswach"
+path="res://.godot/imported/pixil-frame-0-17.png-dcb28f169f201377aa4bee1dd5771be6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/casper sprite 1.png"
-dest_files=["res://.godot/imported/casper sprite 1.png-609cfdc28a4e9f765f92969605997b9f.ctex"]
+source_file="res://assets/images/pixil-frame-0-17.png"
+dest_files=["res://.godot/imported/pixil-frame-0-17.png-dcb28f169f201377aa4bee1dd5771be6.ctex"]
 
 [params]
 

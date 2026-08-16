@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi7mamkmwddri"
-path="res://.godot/imported/tree sprite.png-f559ac6fc6de4971b5f771a667b476b7.ctex"
+uid="uid://hvl32m53um1d"
+path="res://.godot/imported/casper sprite 1.png-669598154f2da5f386fe9fab4c7dd280.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/tree sprite.png"
-dest_files=["res://.godot/imported/tree sprite.png-f559ac6fc6de4971b5f771a667b476b7.ctex"]
+source_file="res://assets/sprites/casper sprite 1.png"
+dest_files=["res://.godot/imported/casper sprite 1.png-669598154f2da5f386fe9fab4c7dd280.ctex"]
 
 [params]
 

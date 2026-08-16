@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj3ct2gnxsxl"
-path="res://.godot/imported/star barrier.png-37802f3967ccb577a6b11d271205e8f7.ctex"
+uid="uid://di8hhhsby06bb"
+path="res://.godot/imported/pixil-frame-0-3.png-badeee9393aa10f6984e46f45339e995.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/images/star barrier.png"
-dest_files=["res://.godot/imported/star barrier.png-37802f3967ccb577a6b11d271205e8f7.ctex"]
+source_file="res://assets/images/pixil-frame-0-3.png"
+dest_files=["res://.godot/imported/pixil-frame-0-3.png-badeee9393aa10f6984e46f45339e995.ctex"]
 
 [params]
 

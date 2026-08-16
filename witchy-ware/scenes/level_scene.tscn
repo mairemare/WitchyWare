@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://d4l1w22c1hwpg"]
 
-[ext_resource type="Texture2D" uid="uid://ttk5mfwkfjso" path="res://resources/images/level screen.png" id="1_bl4ss"]
+[ext_resource type="Texture2D" uid="uid://ttk5mfwkfjso" path="res://assets/images/level screen.png" id="1_bl4ss"]
 [ext_resource type="Script" uid="uid://cytrkn50pknfd" path="res://scenes/timerscreen.gd" id="1_eohcs"]
-[ext_resource type="Texture2D" uid="uid://cy1de1x4186yx" path="res://sprites/witch sprite 1.png" id="2_a74lg"]
-[ext_resource type="Texture2D" uid="uid://rt6gpbs6sdu7" path="res://sprites/pixil-frame-0-13.png" id="3_2m3ut"]
-[ext_resource type="FontFile" uid="uid://dxld7t1yoxdlm" path="res://resources/Cairopixel.ttf" id="4_ojpky"]
-[ext_resource type="Texture2D" uid="uid://hvl32m53um1d" path="res://sprites/casper sprite 1.png" id="6_1lj4f"]
+[ext_resource type="Texture2D" uid="uid://cy1de1x4186yx" path="res://assets/sprites/witch sprite 1.png" id="2_a74lg"]
+[ext_resource type="Texture2D" uid="uid://rt6gpbs6sdu7" path="res://assets/sprites/pixil-frame-0-13.png" id="3_2m3ut"]
+[ext_resource type="FontFile" uid="uid://dxld7t1yoxdlm" path="res://assets/Cairopixel.ttf" id="4_ojpky"]
+[ext_resource type="Texture2D" uid="uid://hvl32m53um1d" path="res://assets/sprites/casper sprite 1.png" id="6_1lj4f"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0jxn2"]
 load_path = "res://.godot/imported/pixil-frame-0-13.png-0546ad274da9cd1c2010545cd48f4438.ctex"
@@ -20,16 +20,11 @@ load_path = "res://.godot/imported/pixil-frame-0-13.png-0546ad274da9cd1c2010545c
 script = ExtResource("1_eohcs")
 
 [node name="background" type="TextureRect" parent="." unique_id=594009224]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_top = 1.0
-offset_right = 1152.0
-offset_bottom = 648.0
-grow_horizontal = 2
+offset_right = 1157.0
+offset_bottom = 654.0
 texture = ExtResource("1_bl4ss")
 expand_mode = 1
-metadata/_edit_lock_ = true
+stretch_mode = 5
 
 [node name="paw box" type="HBoxContainer" parent="." unique_id=1144136760]
 anchors_preset = 14
@@ -109,3 +104,5 @@ rotation = 0.104080096
 texture = ExtResource("6_1lj4f")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=872745330]

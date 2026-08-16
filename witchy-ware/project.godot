@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="WitchyWare"
-run/main_scene="uid://lvsijx48nxhc"
+run/main_scene="uid://citpn1cn74hmt"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -25,12 +25,20 @@ Global="*uid://btk1yetbdardh"
 
 [display]
 
+window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+mouse_cursor/emulate_mouse_from_touch=true
+mouse_cursor/emulate_touch_from_mouse=true
 
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+pointing/emulate_mouse_from_touch=false
 
 [physics]
 

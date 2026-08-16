@@ -38,18 +38,17 @@ func _process(_delta: float) -> void:
 			paw_3.hide()
 			paw_2.hide()
 		0:
-			paw_box.hide() # just hides everything
+			paw_box.hide()
 	
 	timer.text = str(time)
 	level.text = "Level " + str(Global.minigames_done)
 
 func Timer(start_time: float):
-	time = start_time # make the timer, which is reflected through the timer text, start at your desired number
-	while time > 0.0: # run if timer hasnt reached 0
-		await wait(0.1) # asks script to wait on this function. the 'wait' name for the function does nothing here, as await is just telling the scrpit to wait for the function to complete before progressing
-		time -= 0.1 # remove 0.1
-		# progressively get the value smaller and smaller
+	time = start_time 
+	while time > 0.0: 
+		await wait(0.1) 
+		time -= 0.1 
 	return
 
-func wait(seconds: float) -> void: # write this simple function out for wait!
-	await get_tree().create_timer(seconds).timeout # makes u wait, dw abt this being complex '''
+func wait(seconds: float) -> void: 
+	await get_tree().create_timer(seconds).timeout 
