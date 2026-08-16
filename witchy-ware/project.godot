@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 buses/default_bus_layout="uid://exh41tbkvohp"
 
+[autoload]
+
+Global="*uid://btk1yetbdardh"
+
 [display]
 
 window/size/mode=3

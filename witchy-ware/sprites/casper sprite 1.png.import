@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8hjvktdxgdyu"
-path="res://.godot/imported/new title.png-88cf751d9eabc88280950fc48693c48d.ctex"
+uid="uid://hvl32m53um1d"
+path="res://.godot/imported/casper sprite 1.png-609cfdc28a4e9f765f92969605997b9f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/images/new title.png"
-dest_files=["res://.godot/imported/new title.png-88cf751d9eabc88280950fc48693c48d.ctex"]
+source_file="res://sprites/casper sprite 1.png"
+dest_files=["res://.godot/imported/casper sprite 1.png-609cfdc28a4e9f765f92969605997b9f.ctex"]
 
 [params]
 

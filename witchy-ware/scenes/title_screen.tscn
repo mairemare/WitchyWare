@@ -1,15 +1,14 @@
 [gd_scene format=4 uid="uid://lvsijx48nxhc"]
 
-[ext_resource type="Script" uid="uid://x6j5tw0700f0" path="res://scenes/title_screen.gd" id="1_s4lrb"]
-[ext_resource type="Texture2D" uid="uid://b8hjvktdxgdyu" path="res://resources/images/new title.png" id="1_sa3yf"]
+[ext_resource type="Texture2D" uid="uid://mfucdca21xpi" path="res://resources/images/title screen.png" id="2_3yumr"]
 [ext_resource type="FontFile" uid="uid://dxld7t1yoxdlm" path="res://resources/Cairopixel.ttf" id="2_s4lrb"]
 [ext_resource type="Texture2D" uid="uid://di8hhhsby06bb" path="res://resources/images/pixil-frame-0-3.png" id="4_dc4i4"]
 [ext_resource type="Script" uid="uid://muh0ruinxf43" path="res://scenes/audio_control.gd" id="4_mgrm8"]
 [ext_resource type="Texture2D" uid="uid://ddqcb0eti6par" path="res://resources/images/pixil-frame-0-4.png" id="6_3yumr"]
 [ext_resource type="Script" uid="uid://c15sgox4hqo7b" path="res://scenes/windowmode.gd" id="6_e54dn"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_60kqa"]
-texture = ExtResource("1_sa3yf")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_be51o"]
+texture = ExtResource("2_3yumr")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fycrg"]
 bg_color = Color(0.78039217, 0.06666667, 1, 1)
@@ -150,7 +149,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_s4lrb")
 
 [node name="background" type="Panel" parent="." unique_id=391312253]
 layout_mode = 1
@@ -159,8 +157,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_60kqa")
-metadata/_edit_lock_ = true
+theme_override_styles/panel = SubResource("StyleBoxTexture_be51o")
 
 [node name="Title" type="RichTextLabel" parent="." unique_id=1699216393]
 layout_mode = 1

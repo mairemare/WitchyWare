@@ -1,3 +1,111 @@
 [gd_scene format=3 uid="uid://d4l1w22c1hwpg"]
 
+[ext_resource type="Texture2D" uid="uid://ttk5mfwkfjso" path="res://resources/images/level screen.png" id="1_bl4ss"]
+[ext_resource type="Script" uid="uid://cytrkn50pknfd" path="res://scenes/timerscreen.gd" id="1_eohcs"]
+[ext_resource type="Texture2D" uid="uid://cy1de1x4186yx" path="res://sprites/witch sprite 1.png" id="2_a74lg"]
+[ext_resource type="Texture2D" uid="uid://rt6gpbs6sdu7" path="res://sprites/pixil-frame-0-13.png" id="3_2m3ut"]
+[ext_resource type="FontFile" uid="uid://dxld7t1yoxdlm" path="res://resources/Cairopixel.ttf" id="4_ojpky"]
+[ext_resource type="Texture2D" uid="uid://hvl32m53um1d" path="res://sprites/casper sprite 1.png" id="6_1lj4f"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0jxn2"]
+load_path = "res://.godot/imported/pixil-frame-0-13.png-0546ad274da9cd1c2010545cd48f4438.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cu2va"]
+load_path = "res://.godot/imported/pixil-frame-0-13.png-0546ad274da9cd1c2010545cd48f4438.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_78t5s"]
+load_path = "res://.godot/imported/pixil-frame-0-13.png-0546ad274da9cd1c2010545cd48f4438.ctex"
+
 [node name="level_scene" type="Node2D" unique_id=1794435230]
+script = ExtResource("1_eohcs")
+
+[node name="background" type="TextureRect" parent="." unique_id=594009224]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = 1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+texture = ExtResource("1_bl4ss")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="paw box" type="HBoxContainer" parent="." unique_id=1144136760]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 247.99998
+offset_top = 80.00002
+offset_right = 1864.0
+offset_bottom = 400.00003
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.44, 0.4800012)
+metadata/_edit_use_anchors_ = true
+
+[node name="paw1" type="TextureRect" parent="paw box" unique_id=365056275]
+layout_mode = 2
+texture = ExtResource("3_2m3ut")
+
+[node name="paw2" type="TextureRect" parent="paw box" unique_id=691241667]
+layout_mode = 2
+texture = SubResource("CompressedTexture2D_0jxn2")
+
+[node name="paw3" type="TextureRect" parent="paw box" unique_id=2141638981]
+layout_mode = 2
+texture = SubResource("CompressedTexture2D_cu2va")
+
+[node name="paw4" type="TextureRect" parent="paw box" unique_id=1113274864]
+layout_mode = 2
+texture = ExtResource("3_2m3ut")
+
+[node name="paw5" type="TextureRect" parent="paw box" unique_id=1264974938]
+layout_mode = 2
+texture = SubResource("CompressedTexture2D_78t5s")
+
+[node name="level" type="RichTextLabel" parent="." unique_id=1760105944]
+offset_left = 464.0
+offset_top = 248.0
+offset_right = 695.0
+offset_bottom = 318.0
+theme_override_fonts/normal_font = ExtResource("4_ojpky")
+theme_override_font_sizes/normal_font_size = 56
+text = "Level #"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="timer" type="RichTextLabel" parent="." unique_id=2082198522]
+offset_left = 464.0
+offset_top = 512.0
+offset_right = 695.0
+offset_bottom = 582.0
+theme_override_fonts/normal_font = ExtResource("4_ojpky")
+theme_override_font_sizes/normal_font_size = 56
+text = "Timer"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="witch" type="TextureRect" parent="." unique_id=1639618462]
+offset_left = 48.0
+offset_top = 224.0
+offset_right = 304.0
+offset_bottom = 464.0
+texture = ExtResource("2_a74lg")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="casper" type="TextureRect" parent="." unique_id=2120762357]
+offset_left = 839.99994
+offset_top = 344.0
+offset_right = 1096.0
+offset_bottom = 584.0
+rotation = 0.104080096
+texture = ExtResource("6_1lj4f")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
