@@ -4,10 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://mfucdca21xpi" path="res://assets/images/title screen.png" id="2_cs5ya"]
 [ext_resource type="FontFile" uid="uid://dxld7t1yoxdlm" path="res://assets/Cairopixel.ttf" id="2_s4lrb"]
 [ext_resource type="Texture2D" uid="uid://di8hhhsby06bb" path="res://assets/images/pixil-frame-0-3.png" id="4_dc4i4"]
-[ext_resource type="Script" uid="uid://muh0ruinxf43" path="res://scenes/audio_control.gd" id="4_mgrm8"]
-[ext_resource type="Texture2D" uid="uid://dk3qsgfhswach" path="res://assets/images/pixil-frame-0-17.png" id="6_cs5ya"]
-[ext_resource type="Script" uid="uid://c15sgox4hqo7b" path="res://scenes/windowmode.gd" id="6_e54dn"]
-[ext_resource type="Texture2D" uid="uid://dvdcx0vtrbtfc" path="res://assets/images/pixil-frame-0-16.png" id="7_mykxm"]
+[ext_resource type="Script" uid="uid://muh0ruinxf43" path="res://scenes/scripts/audio_control.gd" id="4_mgrm8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fycrg"]
 bg_color = Color(0.78039217, 0.06666667, 1, 1)
@@ -338,19 +335,6 @@ value = 1.0
 script = ExtResource("4_mgrm8")
 audio_bus_name = "Master"
 
-[node name="Window Mode" type="CheckButton" parent="settings/options" unique_id=772207636]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0.5523923, 0.22652024, 0.6083356, 1)
-theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("2_s4lrb")
-theme_override_font_sizes/font_size = 32
-theme_override_icons/checked = ExtResource("6_cs5ya")
-theme_override_icons/unchecked = ExtResource("7_mykxm")
-text = "Window Mode
-"
-script = ExtResource("6_e54dn")
-
 [node name="back" type="Button" parent="settings" unique_id=317381559]
 layout_mode = 1
 anchors_preset = 7
@@ -381,5 +365,4 @@ autoplay = true
 [connection signal="pressed" from="main buttons/settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="main buttons/quit" to="." method="_on_quit_pressed"]
 [connection signal="value_changed" from="settings/options/audio/Audio Control" to="settings/options/audio/Audio Control" method="_on_value_changed"]
-[connection signal="toggled" from="settings/options/Window Mode" to="settings/options/Window Mode" method="_on_toggled"]
 [connection signal="pressed" from="settings/back" to="." method="_on_back_pressed"]

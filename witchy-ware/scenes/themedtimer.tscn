@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bbhptyu38wowx"]
+
+[ext_resource type="Script" uid="uid://bdr33v6asth33" path="res://themedtimer.gd" id="1_7apap"]
+[ext_resource type="FontFile" uid="uid://dxld7t1yoxdlm" path="res://assets/Cairopixel.ttf" id="2_1or6t"]
+
+[node name="Node2D" type="Node2D" unique_id=342602099]
+script = ExtResource("1_7apap")
+
+[node name="timer" type="RichTextLabel" parent="." unique_id=38900285]
+offset_right = 211.0
+offset_bottom = 91.0
+theme_override_colors/font_outline_color = Color(0.2062234, 0.00013249193, 0.26311037, 1)
+theme_override_constants/outline_size = 16
+theme_override_fonts/normal_font = ExtResource("2_1or6t")
+theme_override_font_sizes/normal_font_size = 80
+text = "timer"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1

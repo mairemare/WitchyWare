@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://c2pw5fmdmvxc0"]
+
+[ext_resource type="Script" uid="uid://ctuqeyide4ir8" path="res://scenes/minigame_2.gd" id="1_dqa6p"]
+[ext_resource type="Texture2D" uid="uid://dtmxpvfwjk6d" path="res://assets/images/mg2b.png" id="1_ksu6r"]
+[ext_resource type="Texture2D" uid="uid://b3ge582mo6q5h" path="res://assets/images/pixil-frame-0-22.png" id="2_dqa6p"]
+[ext_resource type="Script" uid="uid://bmkwmbb7qk6ft" path="res://scenes/scripts/button_1.gd" id="3_c3ytc"]
+[ext_resource type="PackedScene" uid="uid://bbhptyu38wowx" path="res://scenes/themedtimer.tscn" id="4_eachr"]
+[ext_resource type="Texture2D" uid="uid://c4ijoygvoeuyb" path="res://assets/images/pixil-frame-0-21.png" id="5_eachr"]
+[ext_resource type="AudioStream" uid="uid://duqoq7lhycqfj" path="res://soundtracks/Track_2__Down_Gaeia_Forest_part_2.mp3" id="7_eachr"]
+
+[node name="Node2D" type="Node2D" unique_id=1294448602]
+script = ExtResource("1_dqa6p")
+
+[node name="scrolling background" type="Parallax2D" parent="." unique_id=947273101]
+repeat_size = Vector2(1155, 0)
+autoscroll = Vector2(100, 0)
+
+[node name="background" type="TextureRect" parent="scrolling background" unique_id=1768861130]
+offset_right = 1155.0
+offset_bottom = 694.0
+texture = ExtResource("1_ksu6r")
+expand_mode = 1
+
+[node name="Button_1" type="TextureButton" parent="." unique_id=257341628]
+offset_left = 109.0
+offset_top = -16.0
+offset_right = 525.0
+offset_bottom = 424.0
+texture_normal = ExtResource("2_dqa6p")
+stretch_mode = 0
+flip_v = true
+script = ExtResource("3_c3ytc")
+
+[node name="Button_2" type="TextureButton" parent="." unique_id=1948367452]
+offset_left = 584.0
+offset_top = 320.0
+offset_right = 1016.0
+offset_bottom = 752.0
+texture_normal = ExtResource("2_dqa6p")
+stretch_mode = 0
+flip_h = true
+script = ExtResource("3_c3ytc")
+
+[node name="Button_3" type="TextureButton" parent="." unique_id=1870352881]
+offset_left = 688.0
+offset_top = -16.0
+offset_right = 1072.0
+offset_bottom = 408.0
+texture_normal = ExtResource("2_dqa6p")
+stretch_mode = 0
+flip_h = true
+flip_v = true
+script = ExtResource("3_c3ytc")
+
+[node name="Button_4" type="TextureButton" parent="." unique_id=1499638348]
+offset_left = 156.0
+offset_top = 309.0
+offset_right = 588.0
+offset_bottom = 741.0
+texture_normal = ExtResource("2_dqa6p")
+stretch_mode = 0
+script = ExtResource("3_c3ytc")
+
+[node name="Button_5" type="TextureButton" parent="." unique_id=973689712]
+offset_top = 152.0
+offset_right = 432.0
+offset_bottom = 584.0
+texture_normal = ExtResource("5_eachr")
+stretch_mode = 0
+script = ExtResource("3_c3ytc")
+
+[node name="Button_6" type="TextureButton" parent="." unique_id=833397356]
+offset_left = 736.0
+offset_top = 176.0
+offset_right = 1168.0
+offset_bottom = 608.0
+texture_normal = ExtResource("5_eachr")
+stretch_mode = 0
+flip_h = true
+script = ExtResource("3_c3ytc")
+
+[node name="Button_7" type="TextureButton" parent="." unique_id=829638171]
+offset_left = 384.0
+offset_top = 368.0
+offset_right = 816.0
+offset_bottom = 800.0
+texture_normal = ExtResource("5_eachr")
+stretch_mode = 0
+flip_h = true
+script = ExtResource("3_c3ytc")
+
+[node name="themed_timer" parent="." unique_id=342602099 instance=ExtResource("4_eachr")]
+position = Vector2(496, 107)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=697244641]
+stream = ExtResource("7_eachr")
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="Button_1" to="Button_1" method="_on_pressed"]
+[connection signal="pressed" from="Button_2" to="Button_2" method="_on_pressed"]
+[connection signal="pressed" from="Button_3" to="Button_3" method="_on_pressed"]
+[connection signal="pressed" from="Button_4" to="Button_4" method="_on_pressed"]
+[connection signal="pressed" from="Button_5" to="Button_5" method="_on_pressed"]
+[connection signal="pressed" from="Button_6" to="Button_6" method="_on_pressed"]
+[connection signal="pressed" from="Button_7" to="Button_7" method="_on_pressed"]

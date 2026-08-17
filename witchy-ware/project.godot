@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [audio]
 
-buses/default_bus_layout="uid://exh41tbkvohp"
+buses/default_bus_layout=""
 
 [autoload]
 
@@ -26,8 +26,7 @@ Global="*uid://btk1yetbdardh"
 [display]
 
 window/size/mode=3
-window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
+window/stretch/mode="viewport"
 mouse_cursor/emulate_mouse_from_touch=true
 mouse_cursor/emulate_touch_from_mouse=true
 

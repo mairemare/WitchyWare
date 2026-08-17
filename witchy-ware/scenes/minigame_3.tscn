@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bk33dp2w7b7m1"]
+
+[ext_resource type="Texture2D" uid="uid://caqjafhjrer13" path="res://assets/images/scene.png" id="1_ijwtv"]
+[ext_resource type="PackedScene" uid="uid://dq7wil6nefu7i" path="res://scenes/magic.tscn" id="2_vhxdv"]
+[ext_resource type="PackedScene" uid="uid://ggpvcsmf2f54" path="res://scenes/player.tscn" id="4_rguwe"]
+[ext_resource type="PackedScene" uid="uid://bbhptyu38wowx" path="res://scenes/themedtimer.tscn" id="5_knknf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vhxdv"]
+size = Vector2(1152, 48)
+
+[node name="Node2D" type="Node2D" unique_id=266382340]
+
+[node name="scrolling background" type="Parallax2D" parent="." unique_id=1702839541]
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(100, 0)
+metadata/_edit_lock_ = true
+
+[node name="background" type="TextureRect" parent="scrolling background" unique_id=1318925087]
+offset_right = 1155.0
+offset_bottom = 694.0
+texture = ExtResource("1_ijwtv")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Platform 1" type="StaticBody2D" parent="." unique_id=713797299]
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Platform 1" unique_id=522226746]
+offset_top = 616.0
+offset_right = 1152.0
+offset_bottom = 664.0
+color = Color(0.06330314, 0.21902955, 0.19195926, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform 1" unique_id=89977390]
+position = Vector2(576, 640)
+shape = SubResource("RectangleShape2D_vhxdv")
+
+[node name="Magic" parent="." unique_id=1462375387 instance=ExtResource("2_vhxdv")]
+position = Vector2(0, -3)
+
+[node name="Player" parent="." unique_id=269796487 instance=ExtResource("4_rguwe")]
+position = Vector2(99, 541)
+
+[node name="themed_timer" parent="." unique_id=342602099 instance=ExtResource("5_knknf")]
+position = Vector2(514, 50)

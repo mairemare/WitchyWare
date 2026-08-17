@@ -1,0 +1,206 @@
+[gd_scene format=3 uid="uid://d4l1w22c1hwpg"]
+
+[ext_resource type="Texture2D" uid="uid://ttk5mfwkfjso" path="res://assets/images/level screen.png" id="1_bl4ss"]
+[ext_resource type="Script" uid="uid://cytrkn50pknfd" path="res://scenes/timerscreen.gd" id="1_eohcs"]
+[ext_resource type="Texture2D" uid="uid://cy1de1x4186yx" path="res://assets/sprites/witch/witch sprite 1.png" id="2_a74lg"]
+[ext_resource type="Texture2D" uid="uid://rt6gpbs6sdu7" path="res://assets/sprites/pixil-frame-0-13.png" id="3_2m3ut"]
+[ext_resource type="FontFile" uid="uid://dxld7t1yoxdlm" path="res://assets/Cairopixel.ttf" id="4_ojpky"]
+[ext_resource type="Script" uid="uid://de5qloe7tyx2p" path="res://scenes/animation folder/shake.gd" id="4_y6jgk"]
+[ext_resource type="Texture2D" uid="uid://hvl32m53um1d" path="res://assets/sprites/casper/casper sprite 1.png" id="6_1lj4f"]
+[ext_resource type="Script" uid="uid://bxhfys7jcpgfh" path="res://scenes/animation folder/float.gd" id="6_l04hq"]
+[ext_resource type="AudioStream" uid="uid://birymm3n7c8li" path="res://soundtracks/Track_2__Down_Gaeia_Forest_part_1.mp3" id="7_xwq35"]
+
+[sub_resource type="Animation" id="Animation_nsphj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("casper2/casper:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-899.6936, 141.37694)]
+}
+
+[sub_resource type="Animation" id="Animation_l04hq"]
+resource_name = "shake"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("casper2/casper:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-899.6936, 141.37694), Vector2(-758.9464, 126.67483), Vector2(-593.8447, 109.42871), Vector2(-453.6078, 94.7799), Vector2(-157.22034, 63.81999), Vector2(43.879745, 44.68303), Vector2(247.77043, 23.385105), Vector2(347.22925, 12.995871)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nsphj"]
+_data = {
+&"RESET": SubResource("Animation_nsphj"),
+&"shake": SubResource("Animation_l04hq")
+}
+
+[sub_resource type="Animation" id="Animation_xwq35"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("witch/witch:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-800.18115, -37.067932)]
+}
+
+[sub_resource type="Animation" id="Animation_ipry3"]
+resource_name = "float"
+length = 4.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("witch/witch:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.5333333, 2.0333333, 2.5333333, 3.0333333, 3.5333333, 4.0333333, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-800.18115, -37.067932), Vector2(-798.10333, -17.17616), Vector2(-796.2333, 0.7264328), Vector2(-802.259, -153.96), Vector2(-493.65, -153.553), Vector2(-307.66223, -153.98062), Vector2(-147.533, -153.707), Vector2(180.681, -153.992), Vector2(296.053, -153.043)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y6jgk"]
+_data = {
+&"RESET": SubResource("Animation_xwq35"),
+&"float": SubResource("Animation_ipry3")
+}
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0jxn2"]
+load_path = "res://.godot/imported/pixil-frame-0-13.png-0546ad274da9cd1c2010545cd48f4438.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cu2va"]
+load_path = "res://.godot/imported/pixil-frame-0-13.png-0546ad274da9cd1c2010545cd48f4438.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_78t5s"]
+load_path = "res://.godot/imported/pixil-frame-0-13.png-0546ad274da9cd1c2010545cd48f4438.ctex"
+
+[node name="level_scene" type="Node2D" unique_id=1794435230]
+script = ExtResource("1_eohcs")
+
+[node name="background" type="TextureRect" parent="." unique_id=594009224]
+offset_right = 1152.0
+offset_bottom = 647.0
+texture = ExtResource("1_bl4ss")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="casper2" type="Node2D" parent="." unique_id=2047171348]
+position = Vector2(839.99994, 344)
+rotation = 0.104080096
+
+[node name="casper" type="TextureRect" parent="casper2" unique_id=2120762357]
+offset_left = -899.6936
+offset_top = 141.37694
+offset_right = -713.92474
+offset_bottom = 317.36908
+rotation = 0.104080096
+texture = ExtResource("6_1lj4f")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="shake" type="AnimationPlayer" parent="casper2" unique_id=1310028820]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_nsphj")
+script = ExtResource("4_y6jgk")
+
+[node name="witch" type="Node2D" parent="." unique_id=1842205823]
+position = Vector2(839.99994, 344)
+rotation = 0.104080096
+
+[node name="witch" type="TextureRect" parent="witch" unique_id=1639618462]
+offset_left = -800.18115
+offset_top = -37.067932
+offset_right = -544.18115
+offset_bottom = 202.93207
+texture = ExtResource("2_a74lg")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="float" type="AnimationPlayer" parent="witch" unique_id=872745330]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_y6jgk")
+script = ExtResource("6_l04hq")
+
+[node name="paw box" type="HBoxContainer" parent="." unique_id=1144136760]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 247.99998
+offset_top = 80.00002
+offset_right = 1864.0
+offset_bottom = 400.00003
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.44, 0.4800012)
+metadata/_edit_use_anchors_ = true
+
+[node name="paw1" type="TextureRect" parent="paw box" unique_id=365056275]
+layout_mode = 2
+texture = ExtResource("3_2m3ut")
+
+[node name="paw2" type="TextureRect" parent="paw box" unique_id=691241667]
+layout_mode = 2
+texture = SubResource("CompressedTexture2D_0jxn2")
+
+[node name="paw3" type="TextureRect" parent="paw box" unique_id=2141638981]
+layout_mode = 2
+texture = SubResource("CompressedTexture2D_cu2va")
+
+[node name="paw4" type="TextureRect" parent="paw box" unique_id=1113274864]
+layout_mode = 2
+texture = ExtResource("3_2m3ut")
+
+[node name="paw5" type="TextureRect" parent="paw box" unique_id=1264974938]
+layout_mode = 2
+texture = SubResource("CompressedTexture2D_78t5s")
+
+[node name="timer" type="RichTextLabel" parent="." unique_id=2082198522]
+offset_left = 464.0
+offset_top = 512.0
+offset_right = 695.0
+offset_bottom = 582.0
+theme_override_fonts/normal_font = ExtResource("4_ojpky")
+theme_override_font_sizes/normal_font_size = 56
+text = "Timer"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="level" type="RichTextLabel" parent="." unique_id=1760105944]
+offset_left = 464.0
+offset_top = 248.0
+offset_right = 695.0
+offset_bottom = 318.0
+theme_override_fonts/normal_font = ExtResource("4_ojpky")
+theme_override_font_sizes/normal_font_size = 56
+text = "Level #"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1258257369]
+stream = ExtResource("7_xwq35")
+autoplay = true
+parameters/looping = true
