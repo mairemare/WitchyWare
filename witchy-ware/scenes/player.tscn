@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ggpvcsmf2f54"]
+
+[ext_resource type="Script" uid="uid://b7y0s0g66yu80" path="res://player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://cqbbiycr0ceqs" path="res://assets/sprites/casper/pixil-frame-0-18.png" id="2_qhqgy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fycrg"]
+radius = 95.0
+
+[node name="Player" type="CharacterBody2D" unique_id=269796487]
+script = ExtResource("1_g2els")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1167332672]
+texture = ExtResource("2_qhqgy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1193603668]
+shape = SubResource("CircleShape2D_fycrg")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1319922605]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=650157146]
+shape = SubResource("CircleShape2D_fycrg")

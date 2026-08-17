@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hvl32m53um1d"
-path="res://.godot/imported/casper sprite 1.png-669598154f2da5f386fe9fab4c7dd280.ctex"
+uid="uid://cy1de1x4186yx"
+path="res://.godot/imported/witch sprite 1.png-86c6919a3da92d80222fea352b9ff8f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/casper sprite 1.png"
-dest_files=["res://.godot/imported/casper sprite 1.png-669598154f2da5f386fe9fab4c7dd280.ctex"]
+source_file="res://assets/sprites/witch/witch sprite 1.png"
+dest_files=["res://.godot/imported/witch sprite 1.png-86c6919a3da92d80222fea352b9ff8f2.ctex"]
 
 [params]
 
