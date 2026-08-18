@@ -122,6 +122,7 @@ metadata/_edit_use_anchors_ = true
 [node name="witch" type="Node2D" parent="." unique_id=2075195166]
 
 [node name="witch" type="TextureRect" parent="witch" unique_id=131211165]
+texture_filter = 1
 offset_left = 304.0
 offset_top = -64.0
 offset_right = 896.0
@@ -150,16 +151,17 @@ shape = SubResource("RectangleShape2D_fycrg")
 
 [node name="ColorRect" type="ColorRect" parent="Platform 2" unique_id=862874862]
 offset_left = 704.0
-offset_top = 472.0
+offset_top = 490.0
 offset_right = 1863.0
-offset_bottom = 520.0
+offset_bottom = 538.0
 color = Color(0.06330314, 0.21902955, 0.19195926, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform 2" unique_id=721081458]
-position = Vector2(1280, 496)
+position = Vector2(1280, 514)
 shape = SubResource("RectangleShape2D_fycrg")
 
 [node name="Platform 3" type="StaticBody2D" parent="." unique_id=335890385]
+position = Vector2(-31, 33)
 
 [node name="ColorRect" type="ColorRect" parent="Platform 3" unique_id=191334852]
 offset_left = -648.0
@@ -173,7 +175,7 @@ position = Vector2(-64, 360)
 shape = SubResource("RectangleShape2D_fycrg")
 
 [node name="Tree 1" type="StaticBody2D" parent="." unique_id=1055861971]
-position = Vector2(0, -122)
+position = Vector2(0, -92)
 
 [node name="TextureRect" type="TextureRect" parent="Tree 1" unique_id=1949886425]
 offset_left = -183.0
@@ -187,7 +189,7 @@ position = Vector2(-1, 364)
 shape = SubResource("RectangleShape2D_4jsgr")
 
 [node name="Tree 2" type="StaticBody2D" parent="." unique_id=294570065]
-position = Vector2(1217, 12)
+position = Vector2(1217, 28)
 
 [node name="TextureRect" type="TextureRect" parent="Tree 2" unique_id=1635892591]
 offset_left = -183.0
@@ -211,7 +213,7 @@ offset_bottom = 459.0
 texture = ExtResource("6_00jeu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="grass" unique_id=227128284]
-position = Vector2(-28, 365)
+position = Vector2(-29, 384)
 shape = SubResource("RectangleShape2D_4jsgr")
 
 [node name="Player" parent="." unique_id=269796487 instance=ExtResource("2_og05i")]
@@ -221,6 +223,7 @@ position = Vector2(88, 544)
 script = ExtResource("7_00jeu")
 
 [node name="Potion" type="TextureRect" parent="Potion" unique_id=1587650316]
+texture_filter = 1
 offset_left = 400.0
 offset_top = 512.0
 offset_right = 504.0
@@ -239,10 +242,11 @@ position = Vector2(456, 544)
 shape = SubResource("CircleShape2D_fycrg")
 
 [node name="Potion2" type="Node2D" parent="." unique_id=381793007]
-position = Vector2(583, -169)
+position = Vector2(583, -129)
 script = ExtResource("7_00jeu")
 
 [node name="Potion_2" type="TextureRect" parent="Potion2" unique_id=503142446]
+texture_filter = 1
 offset_left = 400.0
 offset_top = 495.00128
 offset_right = 504.0
@@ -262,10 +266,11 @@ position = Vector2(456, 544)
 shape = SubResource("CircleShape2D_fycrg")
 
 [node name="Potion3" type="Node2D" parent="." unique_id=296093344]
-position = Vector2(-290, -288)
+position = Vector2(-290, -237)
 script = ExtResource("7_00jeu")
 
 [node name="Potion_3" type="TextureRect" parent="Potion3" unique_id=313236317]
+texture_filter = 1
 offset_left = 400.0
 offset_top = 495.00128
 offset_right = 504.0

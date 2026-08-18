@@ -11,11 +11,8 @@
 [node name="Node2D" type="Node2D" unique_id=1294448602]
 script = ExtResource("1_dqa6p")
 
-[node name="scrolling background" type="Parallax2D" parent="." unique_id=947273101]
-repeat_size = Vector2(1155, 0)
-autoscroll = Vector2(100, 0)
-
-[node name="background" type="TextureRect" parent="scrolling background" unique_id=1768861130]
+[node name="background" type="TextureRect" parent="." unique_id=1768861130]
+texture_filter = 1
 offset_right = 1155.0
 offset_bottom = 694.0
 texture = ExtResource("1_ksu6r")

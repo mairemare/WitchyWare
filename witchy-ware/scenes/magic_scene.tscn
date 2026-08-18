@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://dq7wil6nefu7i"]
 
-[ext_resource type="Script" uid="uid://dkhalnpl2ya4b" path="res://mob.gd" id="1_788o1"]
+[ext_resource type="Script" uid="uid://dkhalnpl2ya4b" path="res://magic.gd" id="1_788o1"]
 [ext_resource type="Texture2D" uid="uid://ousloohjkgau" path="res://assets/images/pixil-frame-0-23.png" id="2_0f2g5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_76p0p"]
 radius = 44.011364
 
-[node name="Node2D" type="RigidBody2D" unique_id=1462375387]
+[node name="Magic" type="RigidBody2D" unique_id=1462375387]
 collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource("1_788o1")
+metadata/_edit_group_ = true
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1296021827]
 offset_right = 76.0
