@@ -1,29 +1,46 @@
 [gd_scene format=3 uid="uid://ggpvcsmf2f54"]
 
 [ext_resource type="Script" uid="uid://b7y0s0g66yu80" path="res://player.gd" id="1_g2els"]
-[ext_resource type="Script" uid="uid://bsex1gexmly81" path="res://scenes/area_2d.gd" id="2_g2els"]
+[ext_resource type="Texture2D" uid="uid://cdr3gedeyb3hj" path="res://assets/sprites/casper/pixil-frame-0-25.png" id="2_g2els"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3vyb7"]
-load_path = "res://.godot/imported/pixil-frame-0-18.png-20634f2ed95bb7de2afbfae39ebc68e7.ctex"
+[sub_resource type="GDScript" id="GDScript_3vyb7"]
+script/source = "extends Area2D
+
+signal hit
+
+
+func _on_body_entered(_body: Node2D) -> void:
+	hide() # Player disappears after being hit.
+	hit.emit()
+	# Must be deferred as we can't change physics properties on a physics callback.
+
+func start(pos):
+	position = pos
+	show()
+	$CollisionShape2D.disabled = false
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qpk3w"]
 size = Vector2(155, 132)
 
-[node name="Player" type="CharacterBody2D" unique_id=269796487]
+[node name="Player" type="CharacterBody2D" unique_id=2002030483]
+z_index = 1
 script = ExtResource("1_g2els")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1167332672]
-texture = SubResource("CompressedTexture2D_3vyb7")
+position = Vector2(0, 0.5)
+scale = Vector2(1, 0.99375)
+texture = ExtResource("2_g2els")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1498360987]
+[node name="Area2D" type="Area2D" parent="." unique_id=1319922605]
+script = SubResource("GDScript_3vyb7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=650157146]
 position = Vector2(1, 10)
 shape = SubResource("RectangleShape2D_qpk3w")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1319922605]
-script = ExtResource("2_g2els")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=650157146]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1498360987]
 position = Vector2(1, 10)
 shape = SubResource("RectangleShape2D_qpk3w")
 

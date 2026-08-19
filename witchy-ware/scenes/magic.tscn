@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dq7wil6nefu7i"]
+
+[ext_resource type="Texture2D" uid="uid://ousloohjkgau" path="res://assets/images/pixil-frame-0-23.png" id="2_0f2g5"]
+
+[node name="Node2D" type="Node2D" unique_id=1727595961]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=203336935]
+offset_right = 104.0
+offset_bottom = 104.0
+texture = ExtResource("2_0f2g5")
+expand_mode = 1

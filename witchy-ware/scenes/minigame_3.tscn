@@ -1,75 +1,112 @@
 [gd_scene format=3 uid="uid://bk33dp2w7b7m1"]
 
 [ext_resource type="Texture2D" uid="uid://caqjafhjrer13" path="res://assets/images/scene.png" id="1_ijwtv"]
-[ext_resource type="Script" uid="uid://bv2v2ngc5sk66" path="res://scenes/minigame_3.gd" id="1_nuwo7"]
-[ext_resource type="PackedScene" uid="uid://dq7wil6nefu7i" path="res://scenes/magic_scene.tscn" id="2_vhxdv"]
+[ext_resource type="Texture2D" uid="uid://bo1nhug6ok7mk" path="res://assets/sprites/witch/pixil-frame-0-19.png" id="2_rguwe"]
+[ext_resource type="Script" uid="uid://dbts6cs83cjxk" path="res://scenes/animation folder/floatup.gd" id="3_knknf"]
 [ext_resource type="PackedScene" uid="uid://ggpvcsmf2f54" path="res://scenes/player.tscn" id="4_rguwe"]
+[ext_resource type="Texture2D" uid="uid://bi7mamkmwddri" path="res://assets/sprites/tree sprite.png" id="4_ybnx4"]
 [ext_resource type="PackedScene" uid="uid://bbhptyu38wowx" path="res://scenes/themedtimer.tscn" id="5_knknf"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vhxdv"]
+[sub_resource type="Animation" id="Animation_vc5od"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("witch:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(304, -64)]
+}
+
+[sub_resource type="Animation" id="Animation_xpvfh"]
+resource_name = "witchleaves"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("witch:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(304, -64), Vector2(304, -99), Vector2(309, -158), Vector2(309, -247), Vector2(312, -332), Vector2(312, -442)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w3p2l"]
+_data = {
+&"RESET": SubResource("Animation_vc5od"),
+&"witchleaves": SubResource("Animation_xpvfh")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1my4u"]
 size = Vector2(1152, 48)
 
-[sub_resource type="Curve2D" id="Curve2D_yiing"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1152, 0, 0, 0, 0, 0, 1152, 664, 0, 0, 0, 0, 0, 664, 0, 0, 0, 0, 1152, 0)
-}
-point_count = 4
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sfvvs"]
+size = Vector2(140, 186)
 
-[node name="Node2D" type="Node2D" unique_id=266382340]
-script = ExtResource("1_nuwo7")
+[node name="Node2D" type="Node2D" unique_id=576034874]
 
-[node name="scrolling background" type="Parallax2D" parent="." unique_id=1702839541]
+[node name="scrolling background" type="Parallax2D" parent="." unique_id=1492222975]
 repeat_size = Vector2(1000, 0)
 autoscroll = Vector2(100, 0)
-metadata/_edit_lock_ = true
 
-[node name="background" type="TextureRect" parent="scrolling background" unique_id=1318925087]
+[node name="background" type="TextureRect" parent="scrolling background" unique_id=2122685358]
 offset_right = 1155.0
 offset_bottom = 694.0
 texture = ExtResource("1_ijwtv")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Platform 1" type="StaticBody2D" parent="." unique_id=713797299]
-metadata/_edit_lock_ = true
+[node name="witch" type="Node2D" parent="." unique_id=660952811]
 
-[node name="ColorRect" type="ColorRect" parent="Platform 1" unique_id=522226746]
+[node name="witch" type="TextureRect" parent="witch" unique_id=373311028]
+texture_filter = 1
+offset_left = 304.0
+offset_top = -64.0
+offset_right = 896.0
+offset_bottom = 374.0
+mouse_filter = 2
+texture = ExtResource("2_rguwe")
+metadata/_edit_use_anchors_ = true
+
+[node name="animation" type="AnimationPlayer" parent="witch" unique_id=1413011754]
+libraries/ = SubResource("AnimationLibrary_w3p2l")
+script = ExtResource("3_knknf")
+
+[node name="Platform 1" type="StaticBody2D" parent="." unique_id=570600391]
+
+[node name="ColorRect" type="ColorRect" parent="Platform 1" unique_id=1589064008]
 offset_top = 616.0
 offset_right = 1152.0
 offset_bottom = 664.0
 color = Color(0.06330314, 0.21902955, 0.19195926, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform 1" unique_id=89977390]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform 1" unique_id=462980764]
 position = Vector2(576, 640)
-shape = SubResource("RectangleShape2D_vhxdv")
+shape = SubResource("RectangleShape2D_1my4u")
+
+[node name="Tree 1" type="StaticBody2D" parent="." unique_id=977681500]
+position = Vector2(24, 160)
+
+[node name="TextureRect" type="TextureRect" parent="Tree 1" unique_id=1108749292]
+offset_left = -183.0
+offset_top = 139.0
+offset_right = 137.0
+offset_bottom = 459.0
+texture = ExtResource("4_ybnx4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree 1" unique_id=194614236]
+position = Vector2(-1, 364)
+shape = SubResource("RectangleShape2D_sfvvs")
+
+[node name="Player" parent="." unique_id=2002030483 instance=ExtResource("4_rguwe")]
+position = Vector2(176, 539)
 
 [node name="themed_timer" parent="." unique_id=342602099 instance=ExtResource("5_knknf")]
-position = Vector2(472, 56)
-
-[node name="Player" parent="." unique_id=269796487 instance=ExtResource("4_rguwe")]
-position = Vector2(576, 541)
-
-[node name="MagicTimer" type="Timer" parent="." unique_id=833281517]
-wait_time = 0.5
-
-[node name="ScoreTimer" type="Timer" parent="." unique_id=2025826042]
-
-[node name="StartTimer" type="Timer" parent="." unique_id=459040646]
-one_shot = true
-
-[node name="StartPosition" type="Marker2D" parent="." unique_id=398231533]
-position = Vector2(576, 544)
-
-[node name="MagicPath" type="Path2D" parent="." unique_id=75010767]
-curve = SubResource("Curve2D_yiing")
-
-[node name="MagicSpawnLocation" type="PathFollow2D" parent="MagicPath" unique_id=670022752]
-position = Vector2(1152, 0)
-rotation = 1.5707964
-
-[node name="Magic" parent="." unique_id=1462375387 instance=ExtResource("2_vhxdv")]
-
-[connection signal="input_event" from="Player" to="." method="game_over"]
-[connection signal="timeout" from="MagicTimer" to="." method="_on_magic_timer_timeout"]
-[connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
-[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+position = Vector2(16, 8)
