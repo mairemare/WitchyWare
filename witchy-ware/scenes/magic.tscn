@@ -2,10 +2,19 @@
 
 [ext_resource type="Texture2D" uid="uid://ousloohjkgau" path="res://assets/images/pixil-frame-0-23.png" id="2_0f2g5"]
 
-[node name="Node2D" type="Node2D" unique_id=1727595961]
+[sub_resource type="CircleShape2D" id="CircleShape2D_fycrg"]
+radius = 56.0
+
+[node name="magic" type="Node2D" unique_id=1727595961]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=203336935]
 offset_right = 104.0
 offset_bottom = 104.0
 texture = ExtResource("2_0f2g5")
 expand_mode = 1
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1411419629]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2071188660]
+position = Vector2(48, 48)
+shape = SubResource("CircleShape2D_fycrg")

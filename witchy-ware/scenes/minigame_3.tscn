@@ -1,48 +1,16 @@
 [gd_scene format=3 uid="uid://bk33dp2w7b7m1"]
 
 [ext_resource type="Texture2D" uid="uid://caqjafhjrer13" path="res://assets/images/scene.png" id="1_ijwtv"]
+[ext_resource type="Script" uid="uid://bv2v2ngc5sk66" path="res://scenes/minigame_3.gd" id="1_sfvvs"]
 [ext_resource type="Texture2D" uid="uid://bo1nhug6ok7mk" path="res://assets/sprites/witch/pixil-frame-0-19.png" id="2_rguwe"]
-[ext_resource type="Script" uid="uid://dbts6cs83cjxk" path="res://scenes/animation folder/floatup.gd" id="3_knknf"]
 [ext_resource type="PackedScene" uid="uid://ggpvcsmf2f54" path="res://scenes/player.tscn" id="4_rguwe"]
 [ext_resource type="Texture2D" uid="uid://bi7mamkmwddri" path="res://assets/sprites/tree sprite.png" id="4_ybnx4"]
+[ext_resource type="Script" uid="uid://ckio0dt1232ag" path="res://scenes/treepoint.gd" id="5_1my4u"]
 [ext_resource type="PackedScene" uid="uid://bbhptyu38wowx" path="res://scenes/themedtimer.tscn" id="5_knknf"]
-
-[sub_resource type="Animation" id="Animation_vc5od"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("witch:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(304, -64)]
-}
-
-[sub_resource type="Animation" id="Animation_xpvfh"]
-resource_name = "witchleaves"
-length = 2.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("witch:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(304, -64), Vector2(304, -99), Vector2(309, -158), Vector2(309, -247), Vector2(312, -332), Vector2(312, -442)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_w3p2l"]
-_data = {
-&"RESET": SubResource("Animation_vc5od"),
-&"witchleaves": SubResource("Animation_xpvfh")
-}
+[ext_resource type="Script" uid="uid://x4k3u1c1gclh" path="res://scenes/magic.gd" id="8_j0t4l"]
+[ext_resource type="Texture2D" uid="uid://ousloohjkgau" path="res://assets/images/pixil-frame-0-23.png" id="9_n2v43"]
+[ext_resource type="Script" uid="uid://ck8p7qchwf53k" path="res://scenes/magicobby.gd" id="10_1my4u"]
+[ext_resource type="AudioStream" uid="uid://duqoq7lhycqfj" path="res://soundtracks/Track_2__Down_Gaeia_Forest_part_2.mp3" id="11_sfvvs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1my4u"]
 size = Vector2(1152, 48)
@@ -50,7 +18,96 @@ size = Vector2(1152, 48)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sfvvs"]
 size = Vector2(140, 186)
 
+[sub_resource type="Animation" id="Animation_w3p2l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-72, -616)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../magic2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(152, -616)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../magic3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(376, -616)]
+}
+
+[sub_resource type="Animation" id="Animation_1my4u"]
+resource_name = "magic"
+length = 4.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-72, -616), Vector2(-72, -480), Vector2(-72, -288), Vector2(-72, -152), Vector2(-72, -24), Vector2(-72, 160), Vector2(-72, 224)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../magic2:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2, 2.5, 3, 3.5, 4, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(152, -616), Vector2(152, -400), Vector2(152, -280), Vector2(152, -152), Vector2(152, 8), Vector2(152, 152)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../magic3:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(376, -616), Vector2(376, -480), Vector2(376, -288), Vector2(376, -152), Vector2(376, -24), Vector2(376, 160), Vector2(376, 224)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sfvvs"]
+_data = {
+&"RESET": SubResource("Animation_w3p2l"),
+&"magic": SubResource("Animation_1my4u")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8vrtp"]
+radius = 56.0
+
 [node name="Node2D" type="Node2D" unique_id=576034874]
+script = ExtResource("1_sfvvs")
 
 [node name="scrolling background" type="Parallax2D" parent="." unique_id=1492222975]
 repeat_size = Vector2(1000, 0)
@@ -74,10 +131,6 @@ offset_bottom = 374.0
 mouse_filter = 2
 texture = ExtResource("2_rguwe")
 metadata/_edit_use_anchors_ = true
-
-[node name="animation" type="AnimationPlayer" parent="witch" unique_id=1413011754]
-libraries/ = SubResource("AnimationLibrary_w3p2l")
-script = ExtResource("3_knknf")
 
 [node name="Platform 1" type="StaticBody2D" parent="." unique_id=570600391]
 
@@ -105,8 +158,107 @@ texture = ExtResource("4_ybnx4")
 position = Vector2(-1, 364)
 shape = SubResource("RectangleShape2D_sfvvs")
 
+[node name="Tree 2" type="Node2D" parent="." unique_id=1128377961]
+position = Vector2(1120, 160)
+script = ExtResource("5_1my4u")
+
+[node name="TextureRect" type="TextureRect" parent="Tree 2" unique_id=813826595]
+offset_left = -183.0
+offset_top = 139.0
+offset_right = 137.0
+offset_bottom = 459.0
+texture = ExtResource("4_ybnx4")
+
+[node name="Area2D" type="Area2D" parent="Tree 2" unique_id=890025169]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree 2/Area2D" unique_id=1901179959]
+position = Vector2(-1, 364)
+shape = SubResource("RectangleShape2D_sfvvs")
+
+[node name="magic" type="Node2D" parent="." unique_id=295444951]
+position = Vector2(-72, -616)
+script = ExtResource("8_j0t4l")
+
+[node name="magic 1" type="TextureRect" parent="magic" unique_id=486244869]
+texture_filter = 1
+offset_left = 400.0
+offset_top = 488.0
+offset_right = 512.0
+offset_bottom = 592.0
+texture = ExtResource("9_n2v43")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="magic" unique_id=1279900248]
+libraries/ = SubResource("AnimationLibrary_sfvvs")
+script = ExtResource("10_1my4u")
+
+[node name="Area2D" type="Area2D" parent="magic" unique_id=1328443680]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="magic/Area2D" unique_id=1566885081]
+position = Vector2(456, 544)
+shape = SubResource("CircleShape2D_8vrtp")
+
+[node name="magic2" type="Node2D" parent="." unique_id=2115933234]
+position = Vector2(152, -616)
+script = ExtResource("8_j0t4l")
+
+[node name="magic 1" type="TextureRect" parent="magic2" unique_id=1912484590]
+texture_filter = 1
+offset_left = 400.0
+offset_top = 488.0
+offset_right = 512.0
+offset_bottom = 592.0
+texture = ExtResource("9_n2v43")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="magic2" unique_id=2058441158]
+libraries/ = SubResource("AnimationLibrary_sfvvs")
+script = ExtResource("10_1my4u")
+
+[node name="Area2D" type="Area2D" parent="magic2" unique_id=1002597472]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="magic2/Area2D" unique_id=1388911545]
+position = Vector2(456, 544)
+shape = SubResource("CircleShape2D_8vrtp")
+
+[node name="magic3" type="Node2D" parent="." unique_id=1412830054]
+position = Vector2(376, -616)
+script = ExtResource("8_j0t4l")
+
+[node name="magic 1" type="TextureRect" parent="magic3" unique_id=1051476908]
+texture_filter = 1
+offset_left = 400.0
+offset_top = 488.0
+offset_right = 512.0
+offset_bottom = 592.0
+texture = ExtResource("9_n2v43")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="magic3" unique_id=1457891294]
+libraries/ = SubResource("AnimationLibrary_sfvvs")
+script = ExtResource("10_1my4u")
+
+[node name="Area2D" type="Area2D" parent="magic3" unique_id=1152649525]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="magic3/Area2D" unique_id=760022073]
+position = Vector2(456, 544)
+shape = SubResource("CircleShape2D_8vrtp")
+
 [node name="Player" parent="." unique_id=2002030483 instance=ExtResource("4_rguwe")]
 position = Vector2(176, 539)
 
 [node name="themed_timer" parent="." unique_id=342602099 instance=ExtResource("5_knknf")]
 position = Vector2(16, 8)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=541148337]
+stream = ExtResource("11_sfvvs")
+autoplay = true
+parameters/looping = true
+
+[connection signal="tree" from="Tree 2" to="." method="_on_tree_2_tree"]
+[connection signal="hit" from="magic" to="." method="_on_magic_hit"]
+[connection signal="animation_finished" from="magic/AnimationPlayer" to="magic/AnimationPlayer" method="_on_animation_finished"]
+[connection signal="hit" from="magic2" to="." method="_on_magic_hit"]
+[connection signal="animation_finished" from="magic2/AnimationPlayer" to="magic2/AnimationPlayer" method="_on_animation_finished"]
+[connection signal="hit" from="magic3" to="." method="_on_magic_hit"]
+[connection signal="animation_finished" from="magic3/AnimationPlayer" to="magic3/AnimationPlayer" method="_on_animation_finished"]
