@@ -12,14 +12,13 @@ extends Node2D
 var time
 
 func _ready() -> void:
-	await Timer(5.0)
-		
-	if Global.minigames_done < 3:
-		Global.minigames_done = Global.minigames_done +1
+	await Timer(5.0) # using the function created
+	
+	if Global.minigames_done < 3: # if you havent completed 3 minigames yet 
+		Global.minigames_done = Global.minigames_done + 1
 		get_tree().change_scene_to_file("res://scenes/minigame_" + str(Global.minigames_done) + ".tscn")
-	else:
-		get_tree().change_scene_to_file("res://scenes/title_screen.tscn")
-			
+
+
 func _process(_delta: float) -> void:
 	match Global.lives:
 
