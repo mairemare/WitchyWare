@@ -10,8 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://cnc8beeva5ukj" path="res://assets/images/pixil-frame-0-7.png" id="6_00jeu"]
 [ext_resource type="Script" uid="uid://cdoa16flok2vf" path="res://scenes/scripts/potion.gd" id="7_00jeu"]
 [ext_resource type="PackedScene" uid="uid://bbhptyu38wowx" path="res://scenes/themedtimer.tscn" id="7_vc5od"]
-[ext_resource type="Animation" uid="uid://cnc0b8f3xdutx" path="res://floating.res" id="8_oxfl2"]
-[ext_resource type="Script" uid="uid://vskc3mx1ruek" path="res://scenes/animation folder/floating.gd" id="9_oxfl2"]
 [ext_resource type="AudioStream" uid="uid://duqoq7lhycqfj" path="res://soundtracks/Track_2__Down_Gaeia_Forest_part_2.mp3" id="12_6n0yg"]
 
 [sub_resource type="Animation" id="Animation_vc5od"]
@@ -62,8 +60,7 @@ loop_mode = 2
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vc5od"]
 _data = {
-&"RESET": SubResource("Animation_fa05o"),
-&"floating": ExtResource("8_oxfl2")
+&"RESET": SubResource("Animation_fa05o")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fycrg"]
@@ -166,6 +163,9 @@ texture = ExtResource("5_1digs")
 position = Vector2(-26, 368)
 shape = SubResource("RectangleShape2D_4jsgr")
 
+[node name="Player" parent="." unique_id=269796487 instance=ExtResource("2_og05i")]
+position = Vector2(88, 544)
+
 [node name="grass" type="StaticBody2D" parent="." unique_id=1081314402]
 position = Vector2(918, 205)
 
@@ -179,9 +179,6 @@ texture = ExtResource("6_00jeu")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="grass" unique_id=227128284]
 position = Vector2(-29, 384)
 shape = SubResource("RectangleShape2D_4jsgr")
-
-[node name="Player" parent="." unique_id=269796487 instance=ExtResource("2_og05i")]
-position = Vector2(88, 544)
 
 [node name="Potion" type="Node2D" parent="." unique_id=108540549]
 script = ExtResource("7_00jeu")
@@ -197,7 +194,6 @@ texture = ExtResource("4_v5ebm")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Potion" unique_id=1018645311]
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_vc5od")
-script = ExtResource("9_oxfl2")
 
 [node name="Area2D" type="Area2D" parent="Potion" unique_id=1855831993]
 
@@ -221,7 +217,6 @@ texture = ExtResource("4_v5ebm")
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_vc5od")
 autoplay = &"floating"
-script = ExtResource("9_oxfl2")
 
 [node name="Area2D" type="Area2D" parent="Potion2" unique_id=1835728050]
 
@@ -244,7 +239,6 @@ texture = ExtResource("4_v5ebm")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Potion3" unique_id=322312244]
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_vc5od")
-script = ExtResource("9_oxfl2")
 
 [node name="Area2D" type="Area2D" parent="Potion3" unique_id=1113319881]
 

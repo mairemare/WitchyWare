@@ -14,12 +14,9 @@ var time : float
 
 func _ready() -> void:
 	await Timer(5.0) # using the function created
-	
 	if Global.minigames_done < 3: # if you havent completed 3 minigames yet
 		Global.minigames_done += 1
-		get_tree().change_scene_to_file(
-			"res://scenes/minigame_" + str(Global.minigames_done
-			) + ".tscn")
+		get_tree().change_scene_to_file("res://scenes/minigame_" + str(Global.minigames_done) + ".tscn")
 	else:
 		get_tree().change_scene_to_file("res://scenes/title_screen.tscn")
 
@@ -47,6 +44,7 @@ func _process(_delta: float) -> void:
 	timer.text = str(time)
 	level.text = "Level " + str(Global.minigames_done)
 
+
 func Timer(start_time: float): 
 	
 	time = start_time 
@@ -59,3 +57,5 @@ func Timer(start_time: float):
 
 func wait(seconds: float) -> void: 
 	await get_tree().create_timer(seconds).timeout 
+	
+	
