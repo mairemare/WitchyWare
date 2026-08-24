@@ -9,19 +9,18 @@ extends Node2D
 @onready var level: RichTextLabel = $level
 @onready var timer: RichTextLabel = $timer
 
+var time
 
-var time : float
+func _ready() -> void: # using the function created
+	Global.minigames_done += 1
+	
+	await Timer(5.0)
+	
+	if Global.minigames_done < 3 or Global.minigames_done == 3: # if you havent completed 3 minigames yet 
+		get_tree().change_scene_to_file("res://scenes/minigame_" + str(Global.minigames_done) + ".tscn") # changes your scene
+		
 
-func _ready() -> void:
-	await Timer(5.0) # using the function created
-	if Global.minigames_done < 3: # if you havent completed 3 minigames yet
-		Global.minigames_done += 1
-		get_tree().change_scene_to_file("res://scenes/minigame_" + str(Global.minigames_done) + ".tscn")
-	else:
-		get_tree().change_scene_to_file("res://scenes/title_screen.tscn")
-
-
-func _process(_delta: float) -> void:
+func _process(_delta: float) -> void: # runs EVERY FRAME
 	match Global.lives:
 
 		4:
@@ -41,21 +40,20 @@ func _process(_delta: float) -> void:
 		0:
 			paw_box.hide()
 	
-	timer.text = str(time)
 	level.text = "Level " + str(Global.minigames_done)
-
+	timer.text = str(time) # make ths text reflect the value of the time variable. this makes names easier. the str() converts the int to a String # this tells you want minigame you're on using concatenation (google the word yo)
 
 func Timer(start_time: float): 
 	
-	time = start_time 
+	time = start_time # make the timer, which is reflected through the timer text, start at your desired number
 	
-	while time > 0.0:
-		await wait(0.1) 
-		time -= 0.1 
+	while time > 0.0: # run if timer hasnt reached 0
+		await wait(0.1) # asks script to wait on this function. the 'wait' name for the function does nothing here, as await is just telling the scrpit to wait for the function to complete before progressing
+		time -= 0.1 # remove 0.1
+		# progressively get the value smaller and smaller
 	
+	#when timer reaches 0
 	return
 
-func wait(seconds: float) -> void: 
-	await get_tree().create_timer(seconds).timeout 
-	
-	
+func wait(seconds: float) -> void: # write this simple function out for wait!
+	await get_tree().create_timer(seconds).timeout

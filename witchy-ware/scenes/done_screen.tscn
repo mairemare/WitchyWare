@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://b3iuer57o382b"]
+
+[ext_resource type="Script" uid="uid://dkixirdild8l3" path="res://scenes/done_screen.gd" id="1_k66lo"]
+[ext_resource type="Texture2D" uid="uid://dhe2x1nd02seu" path="res://assets/images/Screenshot 2026-08-24 at 6.50.22 PM 2.png" id="2_c2erd"]
+[ext_resource type="FontFile" uid="uid://dxld7t1yoxdlm" path="res://assets/Cairopixel.ttf" id="3_t6dg5"]
+[ext_resource type="AudioStream" uid="uid://d313o414q1jxj" path="res://soundtracks/Track_4__In_a_Cart.mp3" id="4_c2erd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_deqd5"]
+bg_color = Color(0.78039217, 0.06666667, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5lftu"]
+bg_color = Color(0.5523923, 0.22652024, 0.6083356, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.78039217, 0.06666667, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1nfvb"]
+bg_color = Color(0.5523923, 0.22652024, 0.6083356, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.78039217, 0.06666667, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_36e62"]
+bg_color = Color(0.5523923, 0.22652024, 0.6083356, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.78039217, 0.06666667, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5oa2a"]
+bg_color = Color(0.5523923, 0.22652024, 0.6083356, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.78039217, 0.06666667, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Control" type="Control" unique_id=661452684]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k66lo")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=125283450]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_c2erd")
+expand_mode = 1
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=319687147]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 304.0
+offset_top = -147.0
+offset_right = -299.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0.2062234, 0.00013249193, 0.26311037, 1)
+theme_override_constants/outline_size = 16
+theme_override_fonts/normal_font = ExtResource("3_t6dg5")
+theme_override_font_sizes/normal_font_size = 96
+text = "You Win!"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="main buttons" type="VBoxContainer" parent="." unique_id=898948120]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.0
+offset_top = -84.0
+offset_right = 126.0
+offset_bottom = 116.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="again" type="Button" parent="main buttons" unique_id=932146767]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.32704604, 0.00032998444, 0.41024485, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("3_t6dg5")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_deqd5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5lftu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1nfvb")
+text = "Play Again?"
+
+[node name="back" type="Button" parent="main buttons" unique_id=1555117862]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.32704604, 0.00032998444, 0.41024485, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("3_t6dg5")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_deqd5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_36e62")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5oa2a")
+action_mode = 0
+text = "Back to Menu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=536729731]
+stream = ExtResource("4_c2erd")
+autoplay = true
+
+[connection signal="pressed" from="main buttons/again" to="." method="_on_again_pressed"]
+[connection signal="pressed" from="main buttons/back" to="." method="_on_back_pressed"]

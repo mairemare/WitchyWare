@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bi7mamkmwddri" path="res://assets/sprites/tree sprite.png" id="4_ybnx4"]
 [ext_resource type="Script" uid="uid://ckio0dt1232ag" path="res://scenes/treepoint.gd" id="5_1my4u"]
 [ext_resource type="PackedScene" uid="uid://bbhptyu38wowx" path="res://scenes/themedtimer.tscn" id="5_knknf"]
+[ext_resource type="Texture2D" uid="uid://gp03nci40ryt" path="res://assets/images/pixil-frame-0-28.png" id="6_j0t4l"]
 [ext_resource type="Script" uid="uid://x4k3u1c1gclh" path="res://scenes/magic.gd" id="8_j0t4l"]
 [ext_resource type="Texture2D" uid="uid://ousloohjkgau" path="res://assets/images/pixil-frame-0-23.png" id="9_n2v43"]
 [ext_resource type="Script" uid="uid://ck8p7qchwf53k" path="res://scenes/magicobby.gd" id="10_1my4u"]
@@ -159,15 +160,16 @@ position = Vector2(-1, 364)
 shape = SubResource("RectangleShape2D_sfvvs")
 
 [node name="Tree 2" type="Node2D" parent="." unique_id=1128377961]
-position = Vector2(1120, 160)
+position = Vector2(1028, 169)
 script = ExtResource("5_1my4u")
 
 [node name="TextureRect" type="TextureRect" parent="Tree 2" unique_id=813826595]
-offset_left = -183.0
-offset_top = 139.0
+texture_filter = 1
+offset_left = -98.0
+offset_top = 192.0
 offset_right = 137.0
 offset_bottom = 459.0
-texture = ExtResource("4_ybnx4")
+texture = ExtResource("6_j0t4l")
 
 [node name="Area2D" type="Area2D" parent="Tree 2" unique_id=890025169]
 
