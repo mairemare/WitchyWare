@@ -12,6 +12,7 @@ extends Node2D
 var time
 
 func _ready() -> void: # using the function created
+	
 	Global.minigames_done += 1
 	
 	await Timer(5.0)
@@ -42,6 +43,9 @@ func _process(_delta: float) -> void: # runs EVERY FRAME
 	
 	level.text = "Level " + str(Global.minigames_done)
 	timer.text = str(time) # make ths text reflect the value of the time variable. this makes names easier. the str() converts the int to a String # this tells you want minigame you're on using concatenation (google the word yo)
+	
+	if Global.lives == 0:
+		get_tree().change_scene_to_file("res://scenes/gameover.tscn")
 
 func Timer(start_time: float): 
 	

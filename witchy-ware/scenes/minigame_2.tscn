@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://ctuqeyide4ir8" path="res://scenes/minigame_2.gd" id="1_dqa6p"]
 [ext_resource type="Texture2D" uid="uid://dtmxpvfwjk6d" path="res://assets/images/mg2b.png" id="1_ksu6r"]
-[ext_resource type="Texture2D" uid="uid://b3ge582mo6q5h" path="res://assets/images/pixil-frame-0-22.png" id="2_dqa6p"]
+[ext_resource type="Texture2D" uid="uid://b3ge582mo6q5h" path="res://assets/sprites/nature/purple leaf.png" id="2_dqa6p"]
 [ext_resource type="Script" uid="uid://bmkwmbb7qk6ft" path="res://scenes/scripts/button_1.gd" id="3_c3ytc"]
 [ext_resource type="PackedScene" uid="uid://bbhptyu38wowx" path="res://scenes/themedtimer.tscn" id="4_eachr"]
-[ext_resource type="Texture2D" uid="uid://c4ijoygvoeuyb" path="res://assets/images/pixil-frame-0-21.png" id="5_eachr"]
+[ext_resource type="Texture2D" uid="uid://c4ijoygvoeuyb" path="res://assets/sprites/nature/leaf.png" id="5_eachr"]
 [ext_resource type="AudioStream" uid="uid://duqoq7lhycqfj" path="res://soundtracks/Track_2__Down_Gaeia_Forest_part_2.mp3" id="7_eachr"]
 
 [node name="Node2D" type="Node2D" unique_id=1294448602]

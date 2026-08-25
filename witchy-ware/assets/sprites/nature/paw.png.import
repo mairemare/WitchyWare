@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhe2x1nd02seu"
-path="res://.godot/imported/Screenshot 2026-08-24 at 6.50.22 PM 2.png-0510b0f6c3dae15a54ee287969ed8ff1.ctex"
+uid="uid://rt6gpbs6sdu7"
+path="res://.godot/imported/paw.png-f14378bfd3645c09bc8fbd633b6e2523.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Screenshot 2026-08-24 at 6.50.22 PM 2.png"
-dest_files=["res://.godot/imported/Screenshot 2026-08-24 at 6.50.22 PM 2.png-0510b0f6c3dae15a54ee287969ed8ff1.ctex"]
+source_file="res://assets/sprites/nature/paw.png"
+dest_files=["res://.godot/imported/paw.png-f14378bfd3645c09bc8fbd633b6e2523.ctex"]
 
 [params]
 

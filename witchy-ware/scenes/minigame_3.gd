@@ -8,8 +8,6 @@ var tree = 0
 var timer_end = false # boolean (true or false) stating whether the timer ended
 
 func _ready() -> void:
-	if Global.lives == 0:
-		get_tree().change_scene_to_file("res://scenes/gameover.tscn")
 	
 	await themed_timer.Timer(10.0) #accessing a function from this node
 	#after this is compeleted...

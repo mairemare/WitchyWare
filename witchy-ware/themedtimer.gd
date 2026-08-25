@@ -2,16 +2,9 @@ extends Node2D
 
 @onready var timer: RichTextLabel = $timer #literally just the richlabeltext
 
-
-
-
 var time : float
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	timer.text = str(snapped(time, 0.10)) # this makes names easier
 

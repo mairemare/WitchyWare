@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b3iuer57o382b"]
 
 [ext_resource type="Script" uid="uid://dkixirdild8l3" path="res://scenes/done_screen.gd" id="1_k66lo"]
-[ext_resource type="Texture2D" uid="uid://dhe2x1nd02seu" path="res://assets/images/Screenshot 2026-08-24 at 6.50.22 PM 2.png" id="2_c2erd"]
+[ext_resource type="Texture2D" uid="uid://dhe2x1nd02seu" path="res://assets/images/winner.png" id="2_c2erd"]
 [ext_resource type="FontFile" uid="uid://dxld7t1yoxdlm" path="res://assets/Cairopixel.ttf" id="3_t6dg5"]
 [ext_resource type="AudioStream" uid="uid://d313o414q1jxj" path="res://soundtracks/Track_4__In_a_Cart.mp3" id="4_c2erd"]
 

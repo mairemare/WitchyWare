@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://c54you8u4cf28"]
 
 [ext_resource type="Script" uid="uid://d33fm2rjmy4p2" path="res://scenes/gameover.gd" id="1_2mkfd"]
-[ext_resource type="Texture2D" uid="uid://sdfx0priqko3" path="res://assets/images/Screenshot 2026-08-25 at 1.51.08 AM 2.png" id="2_h8i2o"]
+[ext_resource type="Texture2D" uid="uid://sdfx0priqko3" path="res://assets/images/gameover.png" id="2_h8i2o"]
 [ext_resource type="FontFile" uid="uid://dxld7t1yoxdlm" path="res://assets/Cairopixel.ttf" id="3_mt7yr"]
+[ext_resource type="AudioStream" uid="uid://b7fsnn1lvjsfc" path="res://soundtracks/Track_3__In_a_Bottle.mp3" id="4_h8i2o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kctv7"]
 bg_color = Color(0.78039217, 0.06666667, 1, 1)
@@ -140,6 +141,10 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_af4fq")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1o2j")
 action_mode = 0
 text = "Back to Menu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1168605806]
+stream = ExtResource("4_h8i2o")
+autoplay = true
 
 [connection signal="pressed" from="main buttons/again" to="." method="_on_again_pressed"]
 [connection signal="pressed" from="main buttons/back" to="." method="_on_back_pressed"]

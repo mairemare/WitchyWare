@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dq7wil6nefu7i"]
 
-[ext_resource type="Texture2D" uid="uid://ousloohjkgau" path="res://assets/images/pixil-frame-0-23.png" id="2_0f2g5"]
+[ext_resource type="Texture2D" uid="uid://ousloohjkgau" path="res://assets/sprites/magic sprites/pixil-frame-0-23.png" id="2_0f2g5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fycrg"]
 radius = 56.0
