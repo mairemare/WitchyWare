@@ -84,15 +84,6 @@ _data = {
 &"float": SubResource("Animation_ipry3")
 }
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0jxn2"]
-load_path = "res://.godot/imported/pixil-frame-0-13.png-0546ad274da9cd1c2010545cd48f4438.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cu2va"]
-load_path = "res://.godot/imported/pixil-frame-0-13.png-0546ad274da9cd1c2010545cd48f4438.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_78t5s"]
-load_path = "res://.godot/imported/pixil-frame-0-13.png-0546ad274da9cd1c2010545cd48f4438.ctex"
-
 [node name="level_scene" type="Node2D" unique_id=1794435230]
 script = ExtResource("1_eohcs")
 
@@ -160,11 +151,11 @@ texture = ExtResource("3_2m3ut")
 
 [node name="paw2" type="TextureRect" parent="paw box" unique_id=691241667]
 layout_mode = 2
-texture = SubResource("CompressedTexture2D_0jxn2")
+texture = ExtResource("3_2m3ut")
 
 [node name="paw3" type="TextureRect" parent="paw box" unique_id=2141638981]
 layout_mode = 2
-texture = SubResource("CompressedTexture2D_cu2va")
+texture = ExtResource("3_2m3ut")
 
 [node name="paw4" type="TextureRect" parent="paw box" unique_id=1113274864]
 layout_mode = 2
@@ -172,7 +163,7 @@ texture = ExtResource("3_2m3ut")
 
 [node name="paw5" type="TextureRect" parent="paw box" unique_id=1264974938]
 layout_mode = 2
-texture = SubResource("CompressedTexture2D_78t5s")
+texture = ExtResource("3_2m3ut")
 
 [node name="timer" type="RichTextLabel" parent="." unique_id=2082198522]
 offset_left = 464.0
