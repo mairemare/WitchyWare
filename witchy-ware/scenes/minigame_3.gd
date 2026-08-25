@@ -8,9 +8,13 @@ var tree = 0
 var timer_end = false # boolean (true or false) stating whether the timer ended
 
 func _ready() -> void:
+	if Global.lives == 0:
+		get_tree().change_scene_to_file("res://scenes/gameover.tscn")
+	
 	await themed_timer.Timer(10.0) #accessing a function from this node
 	#after this is compeleted...
 	timer_end = true # now we're saying "oh ye you ran out of time"
+	
 
 func _process(_delta: float) -> void: # running every frame brochacho
 	
@@ -29,6 +33,7 @@ func _process(_delta: float) -> void: # running every frame brochacho
 		Global.minigames_done -=1 #go back a minigame
 		Global.lives -= 1 # lose ur lives
 		get_tree().change_scene_to_file("res://scenes/timerscreen.tscn")
+		
 
 func _on_magic_hit() -> void:
 	hit = hit +1
