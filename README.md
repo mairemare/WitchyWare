@@ -35,6 +35,12 @@ The witch caught up with you and stored you in a bottle.
 <a href="https://youtu.be/EheekoQZ_nE?si=svBjuj58PBZyoHxI">Options Menu Tutorial</a>
 => Making audio adjuster
 
+<a href="https://youtu.be/V9kshvtj6s0?si=2OYFv96Xo20SFQxR">Animation tutorial</a>
+=> Basics on how to make ur sprites do animations
+
+<a href="https://youtu.be/oED12Mo2018?si=MKt242utlFfkgrCh">Platformer + Player tutorial</a>
+=> Where I got some of my player code
+
 Stardance WarioWare Mission 1
 
 ##
