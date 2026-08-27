@@ -1,6 +1,8 @@
 extends Node2D
 
 @onready var themed_timer: Node2D = $ThemedTimer
+@onready var pause_menu: Control = $"CanvasLayer/pause menu"
+
 # ^^^ You dragged this in the scene by the way 
 
 var potion_collected = 0 # just keeping track of garlic collected
@@ -24,8 +26,15 @@ func _process(_delta: float) -> void: # running every frame brochacho
 		Global.minigames_done -=1 #go back a minigame
 		Global.lives -= 1 # lose ur lives
 		get_tree().change_scene_to_file("res://scenes/timerscreen.tscn") # back to intermission
+	
+	esc()
 		
-
 func potion_collect() -> void:
 	potion_collected = potion_collected +1
 	return
+
+func esc():
+	if pause_menu.visible == true:
+		get_tree().paused = true
+	elif pause_menu.visible == false:
+		get_tree().paused = false

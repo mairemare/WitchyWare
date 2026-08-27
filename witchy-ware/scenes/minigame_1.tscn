@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cnc8beeva5ukj" path="res://assets/sprites/nature/grass.png" id="6_00jeu"]
 [ext_resource type="Script" uid="uid://cdoa16flok2vf" path="res://scenes/scripts/potion.gd" id="7_00jeu"]
 [ext_resource type="PackedScene" uid="uid://bbhptyu38wowx" path="res://scenes/themedtimer.tscn" id="7_vc5od"]
+[ext_resource type="PackedScene" uid="uid://dudj2u2jg5r07" path="res://scenes/pause_menu.tscn" id="10_00jeu"]
 [ext_resource type="AudioStream" uid="uid://duqoq7lhycqfj" path="res://soundtracks/Track_2__Down_Gaeia_Forest_part_2.mp3" id="12_6n0yg"]
 
 [sub_resource type="Animation" id="Animation_vc5od"]
@@ -245,6 +246,12 @@ libraries/ = SubResource("AnimationLibrary_vc5od")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Potion3/Area2D" unique_id=299475168]
 position = Vector2(456, 544)
 shape = SubResource("CircleShape2D_fycrg")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2031947666]
+
+[node name="pause menu" parent="CanvasLayer" unique_id=119861573 instance=ExtResource("10_00jeu")]
+visible = false
+metadata/_edit_use_anchors_ = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=547447972]
 stream = ExtResource("12_6n0yg")
