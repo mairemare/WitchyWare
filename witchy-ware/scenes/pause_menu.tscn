@@ -1,14 +1,9 @@
 [gd_scene format=3 uid="uid://dudj2u2jg5r07"]
 
-[ext_resource type="Script" uid="uid://vjd02n3twnhn" path="res://pausemenu.gd" id="1_kukqi"]
-[ext_resource type="Shader" uid="uid://dt1xpe4n0iskx" path="res://new_shader.gdshader" id="2_5d2l8"]
+[ext_resource type="Script" uid="uid://b0ppkgwvp1jtk" path="res://pause_menu.gd" id="1_myx47"]
 [ext_resource type="FontFile" uid="uid://dxld7t1yoxdlm" path="res://assets/Cairopixel.ttf" id="3_7l7mv"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4jsgr"]
-shader = ExtResource("2_5d2l8")
-shader_parameter/lod = 0.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v4r4p"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kukqi"]
 bg_color = Color(0.68235296, 0.5764706, 1, 1)
 border_width_right = 8
 border_width_bottom = 8
@@ -49,62 +44,26 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="Animation" id="Animation_1s2dm"]
-length = 0.001
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../../../ColorRect:material:shader_parameter/lod")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0),
-"times": PackedFloat32Array(0)
-}
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5d2l8"]
+bg_color = Color(0.78039217, 0.06666667, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
-[sub_resource type="Animation" id="Animation_88e76"]
-resource_name = "blur"
-length = 0.3
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../../../ColorRect:material:shader_parameter/lod")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0, 0.88000005, -0.050000004, -0.14666668, 0, 0),
-"times": PackedFloat32Array(0, 0.3)
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_knqa7"]
-_data = {
-&"RESET": SubResource("Animation_1s2dm"),
-&"blur": SubResource("Animation_88e76")
-}
-
-[node name="Control" type="Control" unique_id=119861573]
+[node name="Control" type="CanvasLayer" unique_id=1205906907]
 process_mode = 3
-layout_mode = 3
+script = ExtResource("1_myx47")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=250370936]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_kukqi")
+color = Color(0.18039216, 0.050980393, 0.20392157, 0.60784316)
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=2033252685]
-material = SubResource("ShaderMaterial_4jsgr")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="settings" type="Panel" parent="." unique_id=684349430]
-layout_mode = 1
+[node name="pause menu" type="Panel" parent="." unique_id=391437084]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -118,13 +77,13 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 mouse_force_pass_scroll_events = false
-theme_override_styles/panel = SubResource("StyleBoxFlat_v4r4p")
+theme_override_styles/panel = SubResource("StyleBoxFlat_kukqi")
 
-[node name="Tag" type="RichTextLabel" parent="settings" unique_id=2101507469]
+[node name="label" type="RichTextLabel" parent="pause menu" unique_id=1194344575]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 69.0
+offset_bottom = 77.0
 grow_horizontal = 2
 theme_override_colors/font_outline_color = Color(0.5523923, 0.22652024, 0.6083356, 1)
 theme_override_constants/outline_size = 8
@@ -135,23 +94,22 @@ scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="options" type="VBoxContainer" parent="settings" unique_id=1145668585]
+[node name="options" type="VBoxContainer" parent="pause menu" unique_id=1013339116]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -128.0
-offset_top = -89.0
-offset_right = 128.0
-offset_bottom = 89.0
+offset_left = -146.5
+offset_top = -82.0
+offset_right = 146.5
+offset_bottom = 82.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 32
-metadata/_edit_use_anchors_ = true
+theme_override_constants/separation = 16
 
-[node name="Resume" type="Button" parent="settings/options" unique_id=1524794450]
+[node name="Resume" type="Button" parent="pause menu/options" unique_id=72869914]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0.32704604, 0.00032998444, 0.41024485, 1)
 theme_override_constants/outline_size = 8
@@ -162,32 +120,28 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_u26n3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ib7db")
 text = "Resume"
 
-[node name="Restart" type="Button" parent="settings/options" unique_id=632205022]
+[node name="Restart" type="Button" parent="pause menu/options" unique_id=1132348822]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0.32704604, 0.00032998444, 0.41024485, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("3_7l7mv")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_fycrg")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5d2l8")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_u26n3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ib7db")
 text = "Restart"
 
-[node name="Quit" type="Button" parent="settings/options" unique_id=1363083914]
+[node name="Exit" type="Button" parent="pause menu/options" unique_id=1460871284]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0.32704604, 0.00032998444, 0.41024485, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("3_7l7mv")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_fycrg")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5d2l8")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_u26n3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ib7db")
-text = "Quit"
+text = "Exit"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1671280785]
-root_node = NodePath("../settings/options/Quit")
-libraries/ = SubResource("AnimationLibrary_knqa7")
-
-[connection signal="pressed" from="settings/options/Resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="settings/options/Restart" to="." method="_on_restart_pressed"]
-[connection signal="pressed" from="settings/options/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="pause menu/options/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="pause menu/options/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="pause menu/options/Exit" to="." method="_on_exit_pressed"]

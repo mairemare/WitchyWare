@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://duqoq7lhycqfj" path="res://soundtracks/Track_2__Down_Gaeia_Forest_part_2.mp3" id="7_eachr"]
 
 [node name="Node2D" type="Node2D" unique_id=1294448602]
+process_mode = 1
 script = ExtResource("1_dqa6p")
 
 [node name="background" type="TextureRect" parent="." unique_id=1768861130]

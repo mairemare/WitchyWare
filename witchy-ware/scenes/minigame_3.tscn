@@ -108,6 +108,7 @@ _data = {
 radius = 56.0
 
 [node name="Node2D" type="Node2D" unique_id=576034874]
+process_mode = 1
 script = ExtResource("1_sfvvs")
 
 [node name="scrolling background" type="Parallax2D" parent="." unique_id=1492222975]

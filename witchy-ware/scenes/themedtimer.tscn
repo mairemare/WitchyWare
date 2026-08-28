@@ -4,6 +4,7 @@
 [ext_resource type="FontFile" uid="uid://dxld7t1yoxdlm" path="res://assets/Cairopixel.ttf" id="2_1or6t"]
 
 [node name="Node2D" type="Node2D" unique_id=342602099]
+process_mode = 1
 script = ExtResource("1_7apap")
 
 [node name="timer" type="RichTextLabel" parent="." unique_id=38900285]

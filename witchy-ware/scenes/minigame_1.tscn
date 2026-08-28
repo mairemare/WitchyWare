@@ -68,6 +68,7 @@ _data = {
 radius = 56.0
 
 [node name="Node2D" type="Node2D" unique_id=109567199]
+process_mode = 1
 script = ExtResource("1_j1cg4")
 
 [node name="scrolling background" type="Parallax2D" parent="." unique_id=1973321201]
@@ -247,12 +248,6 @@ libraries/ = SubResource("AnimationLibrary_vc5od")
 position = Vector2(456, 544)
 shape = SubResource("CircleShape2D_fycrg")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2031947666]
-
-[node name="pause menu" parent="CanvasLayer" unique_id=119861573 instance=ExtResource("10_00jeu")]
-visible = false
-metadata/_edit_use_anchors_ = true
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=547447972]
 stream = ExtResource("12_6n0yg")
 autoplay = true
@@ -260,6 +255,9 @@ parameters/looping = true
 
 [node name="ThemedTimer" parent="." unique_id=342602099 instance=ExtResource("7_vc5od")]
 position = Vector2(37, 1)
+
+[node name="pause_menu" parent="." unique_id=1205906907 instance=ExtResource("10_00jeu")]
+visible = false
 
 [connection signal="potion_collected" from="Potion" to="." method="potion_collect"]
 [connection signal="animation_finished" from="Potion/AnimationPlayer" to="Potion/AnimationPlayer" method="_on_animation_finished"]

@@ -6,20 +6,12 @@ var time : float
 
 
 func _process(_delta: float) -> void:
-	testEsc()
 	timer.text = str(snapped(time, 0.10)) # this makes names easier
-
-func testEsc():
-	if Input.is_action_just_pressed("esc") and get_tree().paused == false:
-		timer.paused = true
-	elif Input.is_action_just_pressed("esc") and get_tree().paused == true:
-		timer.paused = false
-
 
 func Timer(start_time: float): # making a new function for timer countdown!
 	# we want the timer to go down, and when it reaches 0 it transitions 
 	# to the next scene!
-	testEsc()
+
 	
 	time = start_time
 	
