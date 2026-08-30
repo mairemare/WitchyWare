@@ -1,8 +1,8 @@
 extends Node2D
 
 @onready var themed_timer: Node2D = $ThemedTimer
-@onready var pause_menu: Control = $"CanvasLayer/pause menu"
-@onready var control: CanvasLayer = $Control
+@onready var pause_menu: Control = $pause_menu
+
 
 # ^^^ You dragged this in the scene by the way 
 
@@ -27,6 +27,7 @@ func _process(_delta: float) -> void: # running every frame brochacho
 		Global.minigames_done -=1 #go back a minigame
 		Global.lives -= 1 # lose ur lives
 		get_tree().change_scene_to_file("res://scenes/timerscreen.tscn") # back to intermission
+		
 	
 		
 func potion_collect() -> void:
