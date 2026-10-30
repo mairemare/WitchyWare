@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://da315wrw4q0fp"]
+
+[ext_resource type="PackedScene" uid="uid://bkke2vtclpmp5" path="res://scenes/player_paddle.tscn" id="1_8rojo"]
+[ext_resource type="Script" uid="uid://dorspsv5dht5b" path="res://scenes/hit_area.gd" id="2_88pdw"]
+[ext_resource type="PackedScene" uid="uid://dc2koqc2utgs0" path="res://scenes/magic_ball.tscn" id="2_faa1s"]
+[ext_resource type="PackedScene" uid="uid://cs84c4bimp1wd" path="res://scenes/enemy_paddle.tscn" id="3_mxhla"]
+[ext_resource type="Script" uid="uid://cjhhtmettw8xp" path="res://scenes/enemy_paddle.gd" id="4_ewl5d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fycrg"]
+size = Vector2(1157, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jlkes"]
+size = Vector2(86, 570.5)
+
+[node name="Node2D" type="Node2D" unique_id=475613065]
+
+[node name="player" parent="." unique_id=1771835968 instance=ExtResource("1_8rojo")]
+position = Vector2(208, 352)
+
+[node name="magic" parent="." unique_id=1803912769 instance=ExtResource("2_faa1s")]
+position = Vector2(896, 352)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=575251128]
+position = Vector2(576, 352)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=161609523]
+position = Vector2(0, -336)
+shape = SubResource("RectangleShape2D_fycrg")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=738358827]
+position = Vector2(0, 280)
+shape = SubResource("RectangleShape2D_fycrg")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=143968711]
+position = Vector2(-560, 8)
+rotation = -1.5707964
+shape = SubResource("RectangleShape2D_fycrg")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=776939273]
+position = Vector2(560, 16)
+rotation = -1.5707964
+shape = SubResource("RectangleShape2D_fycrg")
+
+[node name="witch" parent="." unique_id=631067612 instance=ExtResource("3_mxhla")]
+position = Vector2(1040, 352)
+script = ExtResource("4_ewl5d")
+
+[node name="hit_area" type="Node2D" parent="." unique_id=435591582]
+position = Vector2(24, 160)
+script = ExtResource("2_88pdw")
+
+[node name="Area2D" type="Area2D" parent="hit_area" unique_id=1741165877]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hit_area/Area2D" unique_id=1782200497]
+position = Vector2(61, 165.25)
+shape = SubResource("RectangleShape2D_jlkes")

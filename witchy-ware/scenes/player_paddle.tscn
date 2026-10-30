@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bkke2vtclpmp5"]
+
+[ext_resource type="Script" uid="uid://db7vq3x82se3c" path="res://scenes/player_paddle.gd" id="1_uktar"]
+[ext_resource type="Texture2D" uid="uid://b64qphku317bo" path="res://assets/sprites/casper/pixil-frame-0-3.png" id="2_uktar"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fycrg"]
+size = Vector2(149, 164)
+
+[node name="Node2D" type="CharacterBody2D" unique_id=1771835968]
+motion_mode = 1
+script = ExtResource("1_uktar")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1680465382]
+position = Vector2(-0.12500596, 0.124996334)
+scale = Vector2(0.29650003, 0.32750002)
+texture = ExtResource("2_uktar")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=918699465]
+shape = SubResource("RectangleShape2D_fycrg")

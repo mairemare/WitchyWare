@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://cnc8beeva5ukj" path="res://assets/sprites/nature/grass.png" id="6_00jeu"]
 [ext_resource type="Script" uid="uid://cdoa16flok2vf" path="res://scenes/scripts/potion.gd" id="7_00jeu"]
 [ext_resource type="PackedScene" uid="uid://bbhptyu38wowx" path="res://scenes/themedtimer.tscn" id="7_vc5od"]
-[ext_resource type="PackedScene" uid="uid://dudj2u2jg5r07" path="res://scenes/pause_menu.tscn" id="10_00jeu"]
 [ext_resource type="AudioStream" uid="uid://duqoq7lhycqfj" path="res://soundtracks/Track_2__Down_Gaeia_Forest_part_2.mp3" id="12_6n0yg"]
 
 [sub_resource type="Animation" id="Animation_vc5od"]
@@ -255,9 +254,6 @@ parameters/looping = true
 
 [node name="ThemedTimer" parent="." unique_id=342602099 instance=ExtResource("7_vc5od")]
 position = Vector2(37, 1)
-
-[node name="pause_menu" parent="." unique_id=1205906907 instance=ExtResource("10_00jeu")]
-visible = false
 
 [connection signal="potion_collected" from="Potion" to="." method="potion_collect"]
 [connection signal="animation_finished" from="Potion/AnimationPlayer" to="Potion/AnimationPlayer" method="_on_animation_finished"]

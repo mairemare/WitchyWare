@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cs84c4bimp1wd"]
+
+[ext_resource type="Texture2D" uid="uid://bfj3527xy12vx" path="res://assets/sprites/witch/pixil-frame-0-2.png" id="1_rjtnw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fycrg"]
+size = Vector2(149, 164)
+
+[node name="Node2D" type="CharacterBody2D" unique_id=1771835968]
+motion_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1680465382]
+position = Vector2(-0.12500596, 0.124996334)
+scale = Vector2(0.29650003, 0.32750002)
+texture = ExtResource("1_rjtnw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=918699465]
+shape = SubResource("RectangleShape2D_fycrg")

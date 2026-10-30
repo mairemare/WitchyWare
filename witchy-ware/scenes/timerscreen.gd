@@ -17,7 +17,7 @@ func _ready() -> void: # using the function created
 	
 	await Timer(5.0)
 	
-	if Global.minigames_done <= 3 or Global.minigames_done == 3: # if you havent completed 3 minigames yet 
+	if Global.minigames_done <= 4 or Global.minigames_done == 4: # if you havent completed 3 minigames yet 
 		get_tree().change_scene_to_file("res://scenes/minigame_" + str(Global.minigames_done) + ".tscn") # changes your scene
 		
 

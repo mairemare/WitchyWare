@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dc2koqc2utgs0"]
+
+[ext_resource type="Texture2D" uid="uid://ousloohjkgau" path="res://assets/sprites/magic sprites/pixil-frame-0-23.png" id="1_aunpj"]
+[ext_resource type="Script" uid="uid://c73ta5emj1344" path="res://scenes/magic_ball.gd" id="1_lo4qq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fycrg"]
+radius = 56.568542
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1803912769]
+script = ExtResource("1_lo4qq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1404707532]
+position = Vector2(-2.3841858e-07, 0)
+scale = Vector2(0.325, 0.3375)
+texture = ExtResource("1_aunpj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1297328514]
+shape = SubResource("CircleShape2D_fycrg")
