@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 var magic : CharacterBody2D
 
 func _ready() -> void:

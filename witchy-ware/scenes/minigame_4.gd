@@ -1,5 +1,9 @@
 extends Node2D
 @onready var themed_timer: Node2D = $themed_timer
+@onready var magic: CharacterBody2D = $magic
+@onready var dead_area: Area2D = $dead_area
+
+
 # ^^^ You dragged this in the scene by the way 
 
 var hit = 0
@@ -34,3 +38,8 @@ func _process(_delta: float) -> void: # running every frame brochacho
 func _on_magic_hit() -> void:
 	hit = hit +1
 	return
+
+func _on_dead_area_area_entered(_area: Area2D) -> void:
+	if magic.overlaps_area(dead_area):
+		emit_signal("hit")
+	
