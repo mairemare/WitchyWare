@@ -191,6 +191,19 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="instructions" type="RichTextLabel" parent="." unique_id=512247872]
+offset_left = 424.0
+offset_top = 320.0
+offset_right = 735.0
+offset_bottom = 448.0
+theme_override_fonts/normal_font = ExtResource("4_ojpky")
+theme_override_font_sizes/normal_font_size = 40
+text = "instructions"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1258257369]
 stream = ExtResource("7_xwq35")
 autoplay = true

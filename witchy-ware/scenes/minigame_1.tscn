@@ -103,7 +103,7 @@ script = ExtResource("4_oxfl2")
 offset_top = 616.0
 offset_right = 1152.0
 offset_bottom = 664.0
-color = Color(0.06330314, 0.21902955, 0.19195926, 1)
+color = Color(0.22745098, 0.16078432, 0.15294118, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform 1" unique_id=321234281]
 position = Vector2(576, 640)
@@ -116,7 +116,7 @@ offset_left = 704.0
 offset_top = 490.0
 offset_right = 1863.0
 offset_bottom = 538.0
-color = Color(0.06330314, 0.21902955, 0.19195926, 1)
+color = Color(0.22745098, 0.16078432, 0.15294118, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform 2" unique_id=721081458]
 position = Vector2(1280, 514)
@@ -130,7 +130,7 @@ offset_left = -648.0
 offset_top = 336.0
 offset_right = 511.0
 offset_bottom = 384.0
-color = Color(0.06330314, 0.21902955, 0.19195926, 1)
+color = Color(0.22745098, 0.16078432, 0.15294118, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform 3" unique_id=253865462]
 position = Vector2(-64, 360)
@@ -140,6 +140,7 @@ shape = SubResource("RectangleShape2D_fycrg")
 position = Vector2(0, -92)
 
 [node name="TextureRect" type="TextureRect" parent="Tree 1" unique_id=1949886425]
+texture_filter = 1
 offset_left = -183.0
 offset_top = 139.0
 offset_right = 137.0
@@ -154,6 +155,7 @@ shape = SubResource("RectangleShape2D_4jsgr")
 position = Vector2(1217, 28)
 
 [node name="TextureRect" type="TextureRect" parent="Tree 2" unique_id=1635892591]
+texture_filter = 1
 offset_left = -183.0
 offset_top = 139.0
 offset_right = 137.0

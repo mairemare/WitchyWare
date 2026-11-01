@@ -8,6 +8,8 @@ extends Node2D
 @onready var paw_5: TextureRect = $"paw box/paw5"
 @onready var level: RichTextLabel = $level
 @onready var timer: RichTextLabel = $timer
+@onready var instructions: RichTextLabel = $instructions
+
 
 var time
 
@@ -20,6 +22,7 @@ func _ready() -> void: # using the function created
 	if Global.minigames_done <= 4 or Global.minigames_done == 4: # if you havent completed 3 minigames yet 
 		get_tree().change_scene_to_file("res://scenes/minigame_" + str(Global.minigames_done) + ".tscn") # changes your scene
 		
+
 
 func _process(_delta: float) -> void: # runs EVERY FRAME
 	match Global.lives:
@@ -43,6 +46,17 @@ func _process(_delta: float) -> void: # runs EVERY FRAME
 	
 	level.text = "Level " + str(Global.minigames_done)
 	timer.text = str(time) # make ths text reflect the value of the time variable. this makes names easier. the str() converts the int to a String # this tells you want minigame you're on using concatenation (google the word yo)
+	if Global.minigames_done == 1:
+		instructions.text = "collect the potions!"
+	if Global.minigames_done == 2:
+		instructions.text = "click on the leaves"
+	if Global.minigames_done == 3:
+		instructions.text = "avoid the orbs and get to the other side!"
+	if Global.minigames_done == 4:
+		instructions.text = "don't let the orb get past you!"
+	if Global.minigames_done == 5:
+		instructions.text = "make your way through the maze...quick!"
+	
 	
 	if Global.lives == 0:
 		get_tree().change_scene_to_file("res://scenes/gameover.tscn")
