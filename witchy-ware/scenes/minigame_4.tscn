@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cs84c4bimp1wd" path="res://scenes/enemy_paddle.tscn" id="3_mxhla"]
 [ext_resource type="Script" uid="uid://cjhhtmettw8xp" path="res://scenes/enemy_paddle.gd" id="4_ewl5d"]
 [ext_resource type="PackedScene" uid="uid://bbhptyu38wowx" path="res://scenes/themedtimer.tscn" id="7_88pdw"]
+[ext_resource type="Script" uid="uid://c6hycg2hoyyx4" path="res://scenes/dead_area.gd" id="7_kd6k2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fycrg"]
 size = Vector2(1152, 33)
@@ -54,21 +55,24 @@ shape = SubResource("RectangleShape2D_4jsgr")
 position = Vector2(-608, -30)
 shape = SubResource("RectangleShape2D_4jsgr")
 
-[node name="dead_area" type="Area2D" parent="." unique_id=1261441245]
+[node name="dead_area" type="Node2D" parent="." unique_id=1876334050]
 position = Vector2(32, 320)
+script = ExtResource("7_kd6k2")
+
+[node name="Area2D" type="Area2D" parent="dead_area" unique_id=1261441245]
 metadata/_edit_group_ = true
 
-[node name="ColorRect" type="ColorRect" parent="dead_area" unique_id=1925618693]
+[node name="ColorRect" type="ColorRect" parent="dead_area/Area2D" unique_id=1925618693]
 offset_left = -32.0
 offset_top = -320.0
 offset_right = 32.0
 offset_bottom = 328.0
 color = Color(0.18431373, 0.48235294, 0.3647059, 1)
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="dead_area" unique_id=2125340143]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dead_area/Area2D" unique_id=2125340143]
 shape = SubResource("RectangleShape2D_4jsgr")
 
 [node name="themed_timer" parent="." unique_id=342602099 instance=ExtResource("7_88pdw")]
 position = Vector2(472, 32)
 
-[connection signal="area_entered" from="dead_area" to="." method="_on_dead_area_entered"]
+[connection signal="hit" from="dead_area" to="." method="_on_dead_area_hit"]

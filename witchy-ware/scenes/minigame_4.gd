@@ -1,9 +1,5 @@
 extends Node2D
 @onready var themed_timer: Node2D = $themed_timer
-@onready var magic: CharacterBody2D = $magic
-@onready var magic_area: CharacterBody2D = $"../magic_ball/CollisionShape2D"
-
-
 
 # ^^^ You dragged this in the scene by the way 
 
@@ -31,6 +27,5 @@ func _process(_delta: float) -> void: # running every frame brochacho
 		get_tree().change_scene_to_file("res://scenes/timerscreen.tscn")
 	
 
-func _on_dead_area_entered(_area: Area2D) -> void:
-	if magic_area.overlaps_area($dead_area):
-		hit += 1
+func _on_dead_area_hit() -> void:
+	hit += 1

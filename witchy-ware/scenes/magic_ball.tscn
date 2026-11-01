@@ -6,13 +6,22 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_fycrg"]
 radius = 56.568542
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1803912769]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1294774432]
 script = ExtResource("1_lo4qq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1297328514]
+[node name="Area2D" type="Area2D" parent="." unique_id=837306129]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1297328514]
 shape = SubResource("CircleShape2D_fycrg")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1404707532]
-position = Vector2(-2.3841858e-07, 0)
+[node name="Sprite2D" type="TextureRect" parent="." unique_id=1128012537]
+offset_left = -56.0
+offset_top = -56.0
+offset_right = 264.0
+offset_bottom = 264.0
 scale = Vector2(0.325, 0.3375)
 texture = ExtResource("1_aunpj")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1335294643]
+shape = SubResource("CircleShape2D_fycrg")
