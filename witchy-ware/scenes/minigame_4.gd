@@ -1,7 +1,8 @@
 extends Node2D
 @onready var themed_timer: Node2D = $themed_timer
 @onready var magic: CharacterBody2D = $magic
-@onready var dead_area: Area2D = $dead_area
+@onready var magic_area: CharacterBody2D = $"../magic_ball/CollisionShape2D"
+
 
 
 # ^^^ You dragged this in the scene by the way 
@@ -18,28 +19,18 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void: # running every frame brochacho
 	
-	if hit == 0: # the double equals is just an argument asking if it's the same, with "=" it'll give an error
+	if timer_end: # the double equals is just an argument asking if it's the same, with "=" it'll give an error
 		if Global.minigames_done == 4: # we access a global script and see how many minigames have been compeleted
 			get_tree().change_scene_to_file("res://scenes/done_screen.tscn") # change current play scene into another, but you make your own finish screen in a later challenge, dont worry abt this rn
 		else:
 			get_tree().change_scene_to_file("res://scenes/timerscreen.tscn") # go back to the intermission scene
-	
-	if timer_end: # if the timer does end...
-		Global.minigames_done -=1 #go back a minigame
-		Global.lives -= 1 # lose ur lives
-		get_tree().change_scene_to_file("res://scenes/timerscreen.tscn") # back to intermission
 		
 	if hit == 1:
 		Global.minigames_done -=1 #go back a minigame
 		Global.lives -= 1 # lose ur lives
 		get_tree().change_scene_to_file("res://scenes/timerscreen.tscn")
-		
-
-func _on_magic_hit() -> void:
-	hit = hit +1
-	return
-
-func _on_dead_area_area_entered(_area: Area2D) -> void:
-	if magic.overlaps_area(dead_area):
-		emit_signal("hit")
 	
+
+func _on_dead_area_entered(_area: Area2D) -> void:
+	if magic_area.overlaps_area($dead_area):
+		hit += 1

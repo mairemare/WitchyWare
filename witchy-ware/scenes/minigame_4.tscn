@@ -12,7 +12,7 @@
 size = Vector2(1152, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4jsgr"]
-size = Vector2(64, 648)
+size = Vector2(64, 652)
 
 [node name="Node2D" type="Node2D" unique_id=475613065]
 script = ExtResource("1_jlkes")
@@ -32,7 +32,7 @@ position = Vector2(184, 464)
 position = Vector2(752, 360)
 
 [node name="witch" parent="." unique_id=631067612 instance=ExtResource("3_mxhla")]
-position = Vector2(944, 352)
+position = Vector2(992, 352)
 script = ExtResource("4_ewl5d")
 
 [node name="barriers" type="StaticBody2D" parent="." unique_id=575251128]
@@ -47,24 +47,28 @@ position = Vector2(0, 312.5)
 shape = SubResource("RectangleShape2D_fycrg")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="barriers" unique_id=892182038]
-position = Vector2(544, -28)
+position = Vector2(608, -32)
 shape = SubResource("RectangleShape2D_4jsgr")
 
-[node name="dead_area" type="Area2D" parent="." unique_id=88826666]
-position = Vector2(328, 352)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="dead_area" unique_id=2099915171]
-position = Vector2(-296, -28)
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="barriers" unique_id=2099915171]
+position = Vector2(-608, -30)
 shape = SubResource("RectangleShape2D_4jsgr")
 
-[node name="ColorRect" type="ColorRect" parent="dead_area" unique_id=289255498]
-offset_left = -328.0
-offset_top = -352.0
-offset_right = -264.0
-offset_bottom = 296.0
+[node name="dead_area" type="Area2D" parent="." unique_id=1261441245]
+position = Vector2(32, 320)
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="dead_area" unique_id=1925618693]
+offset_left = -32.0
+offset_top = -320.0
+offset_right = 32.0
+offset_bottom = 328.0
 color = Color(0.18431373, 0.48235294, 0.3647059, 1)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="dead_area" unique_id=2125340143]
+shape = SubResource("RectangleShape2D_4jsgr")
 
 [node name="themed_timer" parent="." unique_id=342602099 instance=ExtResource("7_88pdw")]
 position = Vector2(472, 32)
 
-[connection signal="area_entered" from="dead_area" to="." method="_on_dead_area_area_entered"]
+[connection signal="area_entered" from="dead_area" to="." method="_on_dead_area_entered"]
